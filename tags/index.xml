@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Data Science Solutions</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Data Science Solutions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This site is hosted on [IPFS](https://ipfs.io)</copyright>
+    <lastBuildDate>Sun, 11 Apr 2021 12:14:34 +0600</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>batchfile</title>
+      <link>/tags/batchfile/</link>
+      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
+      
+      <guid>/tags/batchfile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c#</title>
+      <link>/tags/c#/</link>
+      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
+      
+      <guid>/tags/c#/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>productivity</title>
+      <link>/tags/productivity/</link>
+      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
+      
+      <guid>/tags/productivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>/tags/shell/</link>
+      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
+      
+      <guid>/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>/tags/windows/</link>
+      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
+      
+      <guid>/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
