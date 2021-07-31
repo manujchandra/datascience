@@ -7,38 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This site is hosted on [IPFS](https://ipfs.io)</copyright>
-    <lastBuildDate>Sun, 11 Apr 2021 12:14:34 +0600</lastBuildDate><atom:link href="/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jul 2021 12:30:34 +0530</lastBuildDate><atom:link href="/portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Project 001</title>
-      <link>/portfolio/00001_introduction_to_backtrader/</link>
-      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
+      <title>Index Price Fore- cast</title>
+      <link>/portfolio/00005_index_range_forecast/</link>
+      <pubDate>Sat, 31 Jul 2021 12:30:34 +0530</pubDate>
       
-      <guid>/portfolio/00001_introduction_to_backtrader/</guid>
-      <description>Introduction to Backtrader Backtrader is a great back-testing framework for Python.</description>
+      <guid>/portfolio/00005_index_range_forecast/</guid>
+      <description>NIFTY/BANKNIFTY Price Forecast Study This tool demonstrates a tool that could be useful for Option Traders.</description>
     </item>
     
     <item>
-      <title>Project 002</title>
+      <title>Corre- lation Analysis</title>
       <link>/portfolio/00002_nifty50_correlation/</link>
-      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
+      <pubDate>Sun, 11 Apr 2021 12:14:34 +0530</pubDate>
       
       <guid>/portfolio/00002_nifty50_correlation/</guid>
       <description>NIFTY50 52 week Correlation Analysis The study presented in this project is a stock and sector wise correlation analysis of NIFTY50 over a period of 52 weeks.</description>
     </item>
     
     <item>
-      <title>Project 003</title>
+      <title>Intro to Back- trader</title>
+      <link>/portfolio/00001_introduction_to_backtrader/</link>
+      <pubDate>Sun, 11 Apr 2021 12:14:34 +0530</pubDate>
+      
+      <guid>/portfolio/00001_introduction_to_backtrader/</guid>
+      <description>Introduction to Backtrader Backtrader is a great back-testing framework for Python.</description>
+    </item>
+    
+    <item>
+      <title>Port- folio Optimi- zation</title>
       <link>/portfolio/00003_portfolio_optimization/</link>
-      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
+      <pubDate>Sun, 11 Apr 2021 12:14:34 +0530</pubDate>
       
       <guid>/portfolio/00003_portfolio_optimization/</guid>
       <description>Portfolio Optimization “Modern Portfolio Theory (MPT), a hypothesis put forth by Harry Markowitz in his paper “Portfolio Selection,” (published in 1952 by the Journal of Finance) is an investment theory based on the idea that risk-averse investors can construct portfolios to optimize or maximize expected return based on a given level of market risk, emphasizing that risk is an inherent part of higher reward.</description>
     </item>
     
     <item>
-      <title>Project 004</title>
+      <title>SIP Returns</title>
       <link>/portfolio/00004_sip_returns/</link>
-      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
+      <pubDate>Sun, 11 Apr 2021 12:14:34 +0530</pubDate>
       
       <guid>/portfolio/00004_sip_returns/</guid>
       <description>SIP Return Analysis Extract from Money: Master the Game by Tony Robbins chapter 2.</description>
