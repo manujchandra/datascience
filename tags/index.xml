@@ -2,81 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Data Science Solutions</title>
-    <link>/tags/</link>
+    <link>https://manujchandra.github.io/datascience/tags/</link>
     <description>Recent content in Tags on Data Science Solutions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This site is hosted on [IPFS](https://ipfs.io)</copyright>
-    <lastBuildDate>Sat, 01 May 2021 12:14:34 +0600</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 May 2021 12:14:34 +0600</lastBuildDate><atom:link href="https://manujchandra.github.io/datascience/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>data_science</title>
-      <link>/tags/data_science/</link>
+      <link>https://manujchandra.github.io/datascience/tags/data_science/</link>
       <pubDate>Sat, 01 May 2021 12:14:34 +0600</pubDate>
       
-      <guid>/tags/data_science/</guid>
+      <guid>https://manujchandra.github.io/datascience/tags/data_science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>batchfile</title>
-      <link>/tags/batchfile/</link>
+      <link>https://manujchandra.github.io/datascience/tags/batchfile/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
       
-      <guid>/tags/batchfile/</guid>
+      <guid>https://manujchandra.github.io/datascience/tags/batchfile/</guid>
       <description></description>
     </item>
     
     <item>
       <title>c#</title>
-      <link>/tags/c#/</link>
+      <link>https://manujchandra.github.io/datascience/tags/c#/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
       
-      <guid>/tags/c#/</guid>
+      <guid>https://manujchandra.github.io/datascience/tags/c#/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>/tags/linux/</link>
+      <link>https://manujchandra.github.io/datascience/tags/linux/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
       
-      <guid>/tags/linux/</guid>
+      <guid>https://manujchandra.github.io/datascience/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>productivity</title>
-      <link>/tags/productivity/</link>
+      <link>https://manujchandra.github.io/datascience/tags/productivity/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
       
-      <guid>/tags/productivity/</guid>
+      <guid>https://manujchandra.github.io/datascience/tags/productivity/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>/tags/python/</link>
+      <link>https://manujchandra.github.io/datascience/tags/python/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
       
-      <guid>/tags/python/</guid>
+      <guid>https://manujchandra.github.io/datascience/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shell</title>
-      <link>/tags/shell/</link>
+      <link>https://manujchandra.github.io/datascience/tags/shell/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
       
-      <guid>/tags/shell/</guid>
+      <guid>https://manujchandra.github.io/datascience/tags/shell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>windows</title>
-      <link>/tags/windows/</link>
+      <link>https://manujchandra.github.io/datascience/tags/windows/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
       
-      <guid>/tags/windows/</guid>
+      <guid>https://manujchandra.github.io/datascience/tags/windows/</guid>
       <description></description>
     </item>
     

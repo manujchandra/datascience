@@ -2,81 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/categories/</loc>
+    <loc>https://manujchandra.github.io/datascience/categories/</loc>
     <lastmod>2021-07-31T12:30:34+05:30</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://manujchandra.github.io/datascience/</loc>
     <lastmod>2021-07-31T12:30:34+05:30</lastmod>
   </url><url>
-    <loc>/portfolio/00005_index_range_forecast/</loc>
+    <loc>https://manujchandra.github.io/datascience/portfolio/00005_index_range_forecast/</loc>
     <lastmod>2021-07-31T12:30:34+05:30</lastmod>
   </url><url>
-    <loc>/portfolio/</loc>
+    <loc>https://manujchandra.github.io/datascience/portfolio/</loc>
     <lastmod>2021-07-31T12:30:34+05:30</lastmod>
   </url><url>
-    <loc>/categories/quant/</loc>
+    <loc>https://manujchandra.github.io/datascience/categories/quant/</loc>
     <lastmod>2021-07-31T12:30:34+05:30</lastmod>
   </url><url>
-    <loc>/tags/data_science/</loc>
+    <loc>https://manujchandra.github.io/datascience/tags/data_science/</loc>
     <lastmod>2021-05-01T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>/blog/</loc>
+    <loc>https://manujchandra.github.io/datascience/blog/</loc>
     <lastmod>2021-05-01T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://manujchandra.github.io/datascience/tags/</loc>
     <lastmod>2021-05-01T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>/blog/00002_what_is_data_science/</loc>
+    <loc>https://manujchandra.github.io/datascience/blog/00002_what_is_data_science/</loc>
     <lastmod>2021-05-01T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>/portfolio/00002_nifty50_correlation/</loc>
+    <loc>https://manujchandra.github.io/datascience/portfolio/00002_nifty50_correlation/</loc>
     <lastmod>2021-04-11T12:14:34+05:30</lastmod>
   </url><url>
-    <loc>/portfolio/00001_introduction_to_backtrader/</loc>
+    <loc>https://manujchandra.github.io/datascience/portfolio/00001_introduction_to_backtrader/</loc>
     <lastmod>2021-04-11T12:14:34+05:30</lastmod>
   </url><url>
-    <loc>/portfolio/00003_portfolio_optimization/</loc>
+    <loc>https://manujchandra.github.io/datascience/portfolio/00003_portfolio_optimization/</loc>
     <lastmod>2021-04-11T12:14:34+05:30</lastmod>
   </url><url>
-    <loc>/portfolio/00004_sip_returns/</loc>
+    <loc>https://manujchandra.github.io/datascience/portfolio/00004_sip_returns/</loc>
     <lastmod>2021-04-11T12:14:34+05:30</lastmod>
   </url><url>
-    <loc>/tags/batchfile/</loc>
+    <loc>https://manujchandra.github.io/datascience/tags/batchfile/</loc>
     <lastmod>2021-04-11T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>/tags/c#/</loc>
+    <loc>https://manujchandra.github.io/datascience/tags/c#/</loc>
     <lastmod>2021-04-11T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>/tags/linux/</loc>
+    <loc>https://manujchandra.github.io/datascience/tags/linux/</loc>
     <lastmod>2021-04-11T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>/tags/productivity/</loc>
+    <loc>https://manujchandra.github.io/datascience/tags/productivity/</loc>
     <lastmod>2021-04-11T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>/blog/00001_productivity_tools/</loc>
+    <loc>https://manujchandra.github.io/datascience/blog/00001_productivity_tools/</loc>
     <lastmod>2021-04-11T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>/tags/python/</loc>
+    <loc>https://manujchandra.github.io/datascience/tags/python/</loc>
     <lastmod>2021-04-11T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>/tags/shell/</loc>
+    <loc>https://manujchandra.github.io/datascience/tags/shell/</loc>
     <lastmod>2021-04-11T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>/tags/windows/</loc>
+    <loc>https://manujchandra.github.io/datascience/tags/windows/</loc>
     <lastmod>2021-04-11T12:14:34+06:00</lastmod>
   </url><url>
-    <loc>/funfacts/</loc>
+    <loc>https://manujchandra.github.io/datascience/funfacts/</loc>
   </url><url>
-    <loc>/banner/</loc>
+    <loc>https://manujchandra.github.io/datascience/banner/</loc>
   </url><url>
-    <loc>/contact/</loc>
+    <loc>https://manujchandra.github.io/datascience/contact/</loc>
   </url><url>
-    <loc>/call-to-action/</loc>
+    <loc>https://manujchandra.github.io/datascience/call-to-action/</loc>
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://manujchandra.github.io/datascience/about/</loc>
   </url><url>
-    <loc>/service/</loc>
+    <loc>https://manujchandra.github.io/datascience/service/</loc>
   </url><url>
-    <loc>/testimonial/</loc>
+    <loc>https://manujchandra.github.io/datascience/testimonial/</loc>
   </url>
 </urlset>
