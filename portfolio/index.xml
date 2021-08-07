@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This site is hosted on [IPFS](https://ipfs.io)</copyright>
-    <lastBuildDate>Sat, 31 Jul 2021 12:30:34 +0530</lastBuildDate><atom:link href="https://manujchandra.github.io/datascience/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Aug 2021 13:03:34 +0530</lastBuildDate><atom:link href="https://manujchandra.github.io/datascience/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom Dura- tion Returns</title>
+      <link>https://manujchandra.github.io/datascience/portfolio/00008_duration_returns/</link>
+      <pubDate>Sat, 07 Aug 2021 13:03:34 +0530</pubDate>
+      
+      <guid>https://manujchandra.github.io/datascience/portfolio/00008_duration_returns/</guid>
+      <description>NIFTY/BANKNIFTY Custom Duration Return Analysis This study analyses the returns of an instrument over a user specified time period.</description>
+    </item>
+    
+    <item>
+      <title>Histo- rical Max Runs</title>
+      <link>https://manujchandra.github.io/datascience/portfolio/00007_historical_max_runs/</link>
+      <pubDate>Sat, 07 Aug 2021 12:54:34 +0530</pubDate>
+      
+      <guid>https://manujchandra.github.io/datascience/portfolio/00007_historical_max_runs/</guid>
+      <description>NIFTY/BANKNIFTY Historical Max Runs Analysis This is a range analysis study.</description>
+    </item>
+    
+    <item>
+      <title>Week- day Returns</title>
+      <link>https://manujchandra.github.io/datascience/portfolio/00006_weekday_returns_analysis/</link>
+      <pubDate>Sat, 07 Aug 2021 12:40:34 +0530</pubDate>
+      
+      <guid>https://manujchandra.github.io/datascience/portfolio/00006_weekday_returns_analysis/</guid>
+      <description>NIFTY/BANKNIFTY Weekday Returns Analysis Usually when we analyse an instrument, we do so on a daily, weekly, monthly or yearly basis.</description>
+    </item>
+    
     <item>
       <title>Index Price Fore- cast</title>
       <link>https://manujchandra.github.io/datascience/portfolio/00005_index_range_forecast/</link>
