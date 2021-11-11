@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on Data Science Solutions</title>
-    <link>https://manujchandra.github.io/datascience/tags/python/</link>
+    <link>/tags/python/</link>
     <description>Recent content in python on Data Science Solutions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This site is hosted on [IPFS](https://ipfs.io)</copyright>
-    <lastBuildDate>Sun, 11 Apr 2021 12:14:34 +0600</lastBuildDate><atom:link href="https://manujchandra.github.io/datascience/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Apr 2021 12:14:34 +0600</lastBuildDate><atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Productivity Tools</title>
-      <link>https://manujchandra.github.io/datascience/blog/00001_productivity_tools/</link>
+      <link>/blog/00001_productivity_tools/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
       
-      <guid>https://manujchandra.github.io/datascience/blog/00001_productivity_tools/</guid>
+      <guid>/blog/00001_productivity_tools/</guid>
       <description>Productivity Scripts : I often find myself doing repetitive tasks on my computer.</description>
     </item>
     

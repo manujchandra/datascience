@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>data_science on Data Science Solutions</title>
-    <link>https://manujchandra.github.io/datascience/tags/data_science/</link>
+    <link>/tags/data_science/</link>
     <description>Recent content in data_science on Data Science Solutions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This site is hosted on [IPFS](https://ipfs.io)</copyright>
-    <lastBuildDate>Sat, 01 May 2021 12:14:34 +0600</lastBuildDate><atom:link href="https://manujchandra.github.io/datascience/tags/data_science/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 May 2021 12:14:34 +0600</lastBuildDate><atom:link href="/tags/data_science/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is Data Science?</title>
-      <link>https://manujchandra.github.io/datascience/blog/00002_what_is_data_science/</link>
+      <link>/blog/00002_what_is_data_science/</link>
       <pubDate>Sat, 01 May 2021 12:14:34 +0600</pubDate>
       
-      <guid>https://manujchandra.github.io/datascience/blog/00002_what_is_data_science/</guid>
+      <guid>/blog/00002_what_is_data_science/</guid>
       <description>Who is a Data Scientist? : A Data Scientist is someone who uses data to increase profit or influence a metric of interest.</description>
     </item>
     
