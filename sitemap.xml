@@ -3,18 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/categories/</loc>
-    <lastmod>2021-08-21T12:03:46+05:30</lastmod>
+    <lastmod>2021-12-04T17:03:46+05:30</lastmod>
+  </url><url>
+    <loc>/portfolio/00010_introducing_coretrader/</loc>
+    <lastmod>2021-12-04T17:03:46+05:30</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2021-08-21T12:03:46+05:30</lastmod>
-  </url><url>
-    <loc>/portfolio/00009_master_time_cycle/</loc>
-    <lastmod>2021-08-21T12:03:46+05:30</lastmod>
+    <lastmod>2021-12-04T17:03:46+05:30</lastmod>
   </url><url>
     <loc>/portfolio/</loc>
-    <lastmod>2021-08-21T12:03:46+05:30</lastmod>
+    <lastmod>2021-12-04T17:03:46+05:30</lastmod>
   </url><url>
     <loc>/categories/quant/</loc>
+    <lastmod>2021-12-04T17:03:46+05:30</lastmod>
+  </url><url>
+    <loc>/portfolio/00009_master_time_cycle/</loc>
     <lastmod>2021-08-21T12:03:46+05:30</lastmod>
   </url><url>
     <loc>/portfolio/00008_duration_returns/</loc>
