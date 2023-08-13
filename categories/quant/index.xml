@@ -10,20 +10,11 @@
     <lastBuildDate>Sat, 04 Dec 2021 17:03:46 +0530</lastBuildDate><atom:link href="/categories/quant/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Core Trader Back Tester</title>
-      <link>/portfolio/00010_introducing_coretrader/</link>
+      <link>/portfolio/00009_introducing_coretrader/</link>
       <pubDate>Sat, 04 Dec 2021 17:03:46 +0530</pubDate>
       
-      <guid>/portfolio/00010_introducing_coretrader/</guid>
+      <guid>/portfolio/00009_introducing_coretrader/</guid>
       <description>Introducing CoreTrader - An Object-Oriented, State-Based, Messaging-Enabled Backtester In this demonstration, we have demonstrated CoreTrader which is an easy to use Object-Oriented, State-Based, Messaging-Enabled Backtester.</description>
-    </item>
-    
-    <item>
-      <title>Master Time Cycle</title>
-      <link>/portfolio/00009_master_time_cycle/</link>
-      <pubDate>Sat, 21 Aug 2021 12:03:46 +0530</pubDate>
-      
-      <guid>/portfolio/00009_master_time_cycle/</guid>
-      <description>W.D.Gann (Inspired) Master Time Cycle and Timing Equation W.D. Gann is the man, the myth and the legend!</description>
     </item>
     
     <item>
