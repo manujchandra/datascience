@@ -9,14 +9,14 @@
     content="Solve contemporary business challanges using Data Science and AI">
   
   <meta name="author" content="Manuj">
-  <meta name="generator" content="Hugo 0.89.2" />
+  <meta name="generator" content="Hugo 0.157.0">
 
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
   
   <link rel="stylesheet" href="./plugins/bootstrap/bootstrap.min.css">
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM&#43;Plex&#43;Mono:wght@400;500;600&amp;family=IBM&#43;Plex&#43;Sans:wght@400;500;600;700&amp;display=swap">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   
@@ -47,11 +47,12 @@
   
 
   
-  <meta property="og:title" content="Data Science Solutions" />
-<meta property="og:description" content="Solve contemporary business challanges using Data Science and AI" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/" />
-
+  <meta property="og:url" content="/">
+  <meta property="og:site_name" content="Data Science Solutions">
+  <meta property="og:title" content="Data Science Solutions">
+  <meta property="og:description" content="Solve contemporary business challanges using Data Science and AI">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
 
   
 
@@ -78,15 +79,14 @@
   <div class="slider-next-button slider-button">
     <i class="fa fa-angle-right"></i>
   </div>
-  <div class="owl-carousel owl-full-width owl-theme" id="background-slide">
-    
-    <div class="slider"><img class="img-fluid" src="./images/slider/slider-1.jpg" alt="slider-background"></div>
-    
-    <div class="slider"><img class="img-fluid" src="./images/slider/slider-2.jpg" alt="slider-background"></div>
-    
-    <div class="slider"><img class="img-fluid" src="./images/slider/slider-3.jpg" alt="slider-background"></div>
-    
+  <div class="hero-mosaic-wrap">
+    <canvas id="hero-mosaic" aria-hidden="true"
+      data-slides="images/slider/slider-1.jpg,images/slider/slider-2.jpg,images/slider/slider-3.jpg"></canvas>
   </div>
+  <noscript>
+    <div class="hero-mosaic-fallback"
+      style="background-image: url('images/slider/slider-1.jpg');"></div>
+  </noscript>
   <div class="container">
     <div class="row content">
       <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 head-container">
@@ -117,7 +117,7 @@
 
   
   <div class="navigation-icon">
-    <input id="burger" type="checkbox" />
+    <input id="burger" type="checkbox" autocomplete="off" />
     <label for="burger" class="burger-menu">
       <span></span>
       <span></span>
@@ -195,7 +195,13 @@
   <nav>
     
     <div class="menu-container">
-      <ul class="desktop-menu list-inline mb-0" id="desktop-menu">
+      <ul class="desktop-menu list-inline mb-0 justify-content-end" id="desktop-menu">
+        <a class="mr-auto" href="./">
+          
+          <img class="img-fluid" width="150px" src="./images/logo.png"
+            alt="Data Science Solutions">
+          
+        </a>
         
         <li class="menu-item hvr-underline-from-left 1"><a
             href="./">Home</a>
@@ -303,7 +309,7 @@
   <div class="container">
     <div class="row about-me-holder">
       <div class="col-lg-6 col-md-6 col-sm-6 about-me-text d-flex align-self-center">
-        <div class="text-holder wow fadeInUp" data-wow-duration="1.5s">
+        <div class="text-holder">
           <h1>PROFILE</h1>
           <div class="content"><p><em>“Vision : Enable progressive individuals and organizations to successfully transition and thrive in the new Generative AI economy.”</em></p>
 <p>“My journey into AI started 20 years ago when I bought my first AI book from a roadside shop in Old Delhi. Ever since I followed the road less travelled and believed in doing things differently by taking risks on innovation and emerging technologies.</p>
@@ -319,8 +325,8 @@
         </div>
       </div>
       
-      <div class="col-lg-6 col-sm-6 col-9 about-me-images wow fadeInUp" data-wow-duration="1.5s">
-        <img class="img-fluid" src="./images/backgrounds/portrait.jpg" alt="about-me">
+      <div class="col-lg-6 col-sm-6 col-9 about-me-images">
+        <img class="img-fluid" src="./images/backgrounds/portrait.jpg" alt="Manuj Chandra" loading="lazy" decoding="async">
       </div>
       
     </div>
@@ -328,7 +334,7 @@
     <div class="row experience-skill">
       
       
-      <div class="col-lg-6 col-sm-6 col-11 experience wow fadeInUp" data-wow-duration="1.5s">
+      <div class="col-lg-6 col-sm-6 col-11 experience">
         <h3>EXPERIENCE</h3>
         <ul class="experience-chart">
           
@@ -447,7 +453,7 @@
 
       
       
-      <div class="col-lg-6 col-sm-6 col-11 skill wow fadeInUp" data-wow-duration="1.5s">
+      <div class="col-lg-6 col-sm-6 col-11 skill">
         <h3>SKILL</h3>
         <div class="skill-progress-bar">
           
@@ -531,54 +537,48 @@
 <section class="services "  id="service">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto col-sm-10">
-        <div class="wow fadeInUp" data-wow-duration="1.5s">
+      <div class="col-lg-10 mx-auto col-sm-10">
+        <div class="">
           <div class="services-heading">
             <div class="bar"></div>
             <h1>SERVICES</h1>
           </div>
           <div class="row">
             
-            <div class="col-lg-4 col-sm-4 col-12 services-icon">
-              <div class="service-img">
-                <img class="img-fluid" src="./images/icons/web-development.png" alt="Data Science">
-              </div>
-              <div class="service-label">Data Science</div>
+            <div class="col-lg-4 col-sm-6 col-12 service-item">
+              <div class="service-mark">DS</div>
+              <h3 class="service-label">Data Science</h3>
+              <p class="service-desc">Production models framed around the decision they have to support — from problem definition through to deployment that survives live data.</p>
             </div>
             
-            <div class="col-lg-4 col-sm-4 col-12 services-icon">
-              <div class="service-img">
-                <img class="img-fluid" src="./images/icons/graphic-design.png" alt="Corporate Training">
-              </div>
-              <div class="service-label">Corporate Training</div>
+            <div class="col-lg-4 col-sm-6 col-12 service-item">
+              <div class="service-mark">QA</div>
+              <h3 class="service-label">Quantitative Analytics</h3>
+              <p class="service-desc">Strategy research, backtesting infrastructure and the risk arithmetic that sits underneath a position.</p>
             </div>
             
-            <div class="col-lg-4 col-sm-4 col-12 services-icon">
-              <div class="service-img">
-                <img class="img-fluid" src="./images/icons/dbms.png" alt="Google Cloud Computing">
-              </div>
-              <div class="service-label">Google Cloud Computing</div>
+            <div class="col-lg-4 col-sm-6 col-12 service-item">
+              <div class="service-mark">AI</div>
+              <h3 class="service-label">Generative AI</h3>
+              <p class="service-desc">LLM systems that hold up outside a demo — retrieval, evaluation, and the guardrails around both.</p>
             </div>
             
-            <div class="col-lg-4 col-sm-4 col-12 services-icon">
-              <div class="service-img">
-                <img class="img-fluid" src="./images/icons/software-development.png" alt="Technical Consultancy">
-              </div>
-              <div class="service-label">Technical Consultancy</div>
+            <div class="col-lg-4 col-sm-6 col-12 service-item">
+              <div class="service-mark">CT</div>
+              <h3 class="service-label">Corporate Training</h3>
+              <p class="service-desc">Curriculum and faculty upskilling proven at university scale, across more than 2,000 hours of courseware.</p>
             </div>
             
-            <div class="col-lg-4 col-sm-4 col-12 services-icon">
-              <div class="service-img">
-                <img class="img-fluid" src="./images/icons/marketing.png" alt="Quantitative Analytics">
-              </div>
-              <div class="service-label">Quantitative Analytics</div>
+            <div class="col-lg-4 col-sm-6 col-12 service-item">
+              <div class="service-mark">GC</div>
+              <h3 class="service-label">Google Cloud Computing</h3>
+              <p class="service-desc">Cloud architecture and data platforms on GCP, sized to the workload rather than the brochure.</p>
             </div>
             
-            <div class="col-lg-4 col-sm-4 col-12 services-icon">
-              <div class="service-img">
-                <img class="img-fluid" src="./images/icons/mobile-app.png" alt="Generative AI">
-              </div>
-              <div class="service-label">Generative AI</div>
+            <div class="col-lg-4 col-sm-6 col-12 service-item">
+              <div class="service-mark">TC</div>
+              <h3 class="service-label">Technical Consultancy</h3>
+              <p class="service-desc">Independent review of models, pipelines and the engineering decisions underneath them.</p>
             </div>
             
           </div>
@@ -593,63 +593,63 @@
 
 
 <style></style>
-<section id="cta" class="need-service overlay section-sm wow fadeInUp "  data-wow-duration="1.5s" style="background-image: url('images/backgrounds/need-service.jpg');">
+<section id="cta" class="need-service overlay section-sm "  style="background-image: url('images/backgrounds/need-service.jpg');">
   <div class="container position-relative z-index-9">
     <h1>NEED DATA SCIENCE SERVICES?</h1>
     <div class="text-white content"><h4 id="tools-and-technologies">Tools and Technologies:</h4>
 <table>
-<thead>
-<tr>
-<th style="text-align:left"><strong>Domain</strong></th>
-<th style="text-align:left"><strong>Tools</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><strong>Business Intelligence and Visualization</strong></td>
-<td style="text-align:left">Tableau, Matplotlib, Seaborn, Plotley, Bokeh, Superset</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Data Engineering</strong></td>
-<td style="text-align:left">Cloud SQL, Spanner, BigTable, BigQuery, Dataflow (Apache Beam), PubSub, Cloud Functions, DataProc (Hadoop/Spark), DataPrep, Composer (Apache Airflow), Firestore, Data Fusion, Docker, Kubernetes, Regex</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Machine Learning</strong></td>
-<td style="text-align:left">H2O.ai, AutoML, Driverless AI, Scikit-Learn, Tensorflow 2, Featuretools, Google VertexAI, Colab, Langchain, LlamaIndex, VectorDBs - Chroma, FAISS, Pinecone, Huggingface</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Cloud Computing</strong></td>
-<td style="text-align:left">Google Cloud Platform (GCP)</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Data Analytics</strong></td>
-<td style="text-align:left">KNIME Analytic, Pandas, Koalas, Dask, Numpy</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Statistics (Bayesian and Frequentist)</strong></td>
-<td style="text-align:left">PyMC3, scipy.stats, Statsmodels</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Languages</strong></td>
-<td style="text-align:left">Python, C#, LaTeX</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Web 3.0</strong></td>
-<td style="text-align:left">IPFS</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Cybersecurity</strong></td>
-<td style="text-align:left">GnuPG/GPG</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Operating System</strong></td>
-<td style="text-align:left">Debian GNU/Linux, BASH, Xonsh, Vagrant, Btrfs</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Tools</strong></td>
-<td style="text-align:left">Git/Gitflow, Visual Studio Code, Workbench/Jupyter, Streamlit, Anaconda</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"><strong>Domain</strong></th>
+          <th style="text-align: left"><strong>Tools</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Business Intelligence and Visualization</strong></td>
+          <td style="text-align: left">Tableau, Matplotlib, Seaborn, Plotley, Bokeh, Superset</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Data Engineering</strong></td>
+          <td style="text-align: left">Cloud SQL, Spanner, BigTable, BigQuery, Dataflow (Apache Beam), PubSub, Cloud Functions, DataProc (Hadoop/Spark), DataPrep, Composer (Apache Airflow), Firestore, Data Fusion, Docker, Kubernetes, Regex</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Machine Learning</strong></td>
+          <td style="text-align: left">H2O.ai, AutoML, Driverless AI, Scikit-Learn, Tensorflow 2, Featuretools, Google VertexAI, Colab, Langchain, LlamaIndex, VectorDBs - Chroma, FAISS, Pinecone, Huggingface</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Cloud Computing</strong></td>
+          <td style="text-align: left">Google Cloud Platform (GCP)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Data Analytics</strong></td>
+          <td style="text-align: left">KNIME Analytic, Pandas, Koalas, Dask, Numpy</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Statistics (Bayesian and Frequentist)</strong></td>
+          <td style="text-align: left">PyMC3, scipy.stats, Statsmodels</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Languages</strong></td>
+          <td style="text-align: left">Python, C#, LaTeX</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Web 3.0</strong></td>
+          <td style="text-align: left">IPFS</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Cybersecurity</strong></td>
+          <td style="text-align: left">GnuPG/GPG</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Operating System</strong></td>
+          <td style="text-align: left">Debian GNU/Linux, BASH, Xonsh, Vagrant, Btrfs</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Tools</strong></td>
+          <td style="text-align: left">Git/Gitflow, Visual Studio Code, Workbench/Jupyter, Streamlit, Anaconda</td>
+      </tr>
+  </tbody>
 </table>
 </div> 
     
@@ -669,8 +669,8 @@
   <div class="container-fluid text-center">
     <div class="row portfolio-holder text-left">
       <div class="col-12 text-center">
-        <h1 class="wow fadeInUp" data-wow-duration="1.5s">Portfolio</h1>
-        <div class="filtering wow fadeInUp" data-wow-duration="1.5s">
+        <h1 class="">Portfolio</h1>
+        <div class="filtering">
           <div class="btn-group btn-group-toggle portfolio-navigation" data-toggle="buttons">
             <label class="btn btn-sm btn-primary active hvr-sweep-to-right">
               <input type="radio" name="shuffle-filter" value="all" checked="checked" />All
@@ -730,21 +730,26 @@
         </div>
       </div>
       <div class="col-lg-10 col-md-10 col-sm-10 col-10 mx-auto">
-        <div class="row filtr-wrapper wow fadeInUp list" data-wow-duration="1.5s">
+        <div class="row filtr-wrapper list">
           
           <div class="col-lg-4 col-md-6 col-sm-6 col-12 filtr-item"
             data-groups="[&quot;linux&quot;]">
             <div class="item-holder">
               <a class="image-pop" href="./images/portfolio/ViperOS.jpg" title="ViperOS">
-                 <img src="./images/portfolio/ViperOS.jpg" alt="ViperOS">
+                <img src="./images/portfolio/ViperOS.jpg" alt="ViperOS">
               </a>
-              <div class="item-caption">
-                <h2 class="mt-2"><a class="text-white" href="./portfolio/00010_viperos/">ViperOS</a></h2>
-                
-                <p class="mb-0 text-light">Linux</p>
-                
-                <div class="item-created text-light">10 Jul, 24</div>
-              </div>
+              <a class="item-caption" href="./portfolio/00010_viperos/">
+                <h2>ViperOS</h2>
+                <div class="item-reveal">
+                  <div class="item-reveal-inner">
+                    <div class="item-meta">
+                      <span class="item-cat">Linux</span>
+                      <span class="item-created">10 Jul, 24</span>
+                    </div>
+                    <p class="item-desc">A Vim-inspired, Python-powered and keyboard-centric GNU/Linux distribution built for makers.</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
           
@@ -752,85 +757,110 @@
             data-groups="[&quot;quant&quot;]">
             <div class="item-holder">
               <a class="image-pop" href="./images/portfolio/CoreTrader.jpg" title="Core Trader Back Tester">
-                 <img src="./images/portfolio/CoreTrader.jpg" alt="Core Trader Back Tester">
+                <img src="./images/portfolio/CoreTrader.jpg" alt="Core Trader Back Tester">
               </a>
-              <div class="item-caption">
-                <h2 class="mt-2"><a class="text-white" href="./portfolio/00009_introducing_coretrader/">Core Trader Back Tester</a></h2>
-                
-                <p class="mb-0 text-light">Quant</p>
-                
-                <div class="item-created text-light">04 Dec, 21</div>
-              </div>
+              <a class="item-caption" href="./portfolio/00009_introducing_coretrader/">
+                <h2>Core Trader Back Tester</h2>
+                <div class="item-reveal">
+                  <div class="item-reveal-inner">
+                    <div class="item-meta">
+                      <span class="item-cat">Quant</span>
+                      <span class="item-created">04 Dec, 21</span>
+                    </div>
+                    <p class="item-desc">Introducing CoreTrader - An Object-Oriented, State-Based, Messaging-Enabled Backtester</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
           
           <div class="col-lg-4 col-md-6 col-sm-6 col-12 filtr-item"
             data-groups="[&quot;quant&quot;]">
             <div class="item-holder">
-              <a class="image-pop" href="./images/portfolio/DurationReturnsAnalysis.jpg" title="Custom Dura- tion Returns">
-                 <img src="./images/portfolio/DurationReturnsAnalysis.jpg" alt="Custom Dura- tion Returns">
+              <a class="image-pop" href="./images/portfolio/DurationReturnsAnalysis.jpg" title="Custom Duration Returns">
+                <img src="./images/portfolio/DurationReturnsAnalysis.jpg" alt="Custom Duration Returns">
               </a>
-              <div class="item-caption">
-                <h2 class="mt-2"><a class="text-white" href="./portfolio/00008_duration_returns/">Custom Dura- tion Returns</a></h2>
-                
-                <p class="mb-0 text-light">Quant</p>
-                
-                <div class="item-created text-light">07 Aug, 21</div>
-              </div>
+              <a class="item-caption" href="./portfolio/00008_duration_returns/">
+                <h2>Custom Duration Returns</h2>
+                <div class="item-reveal">
+                  <div class="item-reveal-inner">
+                    <div class="item-meta">
+                      <span class="item-cat">Quant</span>
+                      <span class="item-created">07 Aug, 21</span>
+                    </div>
+                    <p class="item-desc">NIFTY/BANKNIFTY Custom Duration Return Analysis.</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
           
           <div class="col-lg-4 col-md-6 col-sm-6 col-12 filtr-item"
             data-groups="[&quot;quant&quot;]">
             <div class="item-holder">
-              <a class="image-pop" href="./images/portfolio/HistoricalMaxRuns.jpg" title="Histo- rical Max Runs">
-                 <img src="./images/portfolio/HistoricalMaxRuns.jpg" alt="Histo- rical Max Runs">
+              <a class="image-pop" href="./images/portfolio/HistoricalMaxRuns.jpg" title="Historical Max Runs">
+                <img src="./images/portfolio/HistoricalMaxRuns.jpg" alt="Historical Max Runs">
               </a>
-              <div class="item-caption">
-                <h2 class="mt-2"><a class="text-white" href="./portfolio/00007_historical_max_runs/">Histo- rical Max Runs</a></h2>
-                
-                <p class="mb-0 text-light">Quant</p>
-                
-                <div class="item-created text-light">07 Aug, 21</div>
-              </div>
+              <a class="item-caption" href="./portfolio/00007_historical_max_runs/">
+                <h2>Historical Max Runs</h2>
+                <div class="item-reveal">
+                  <div class="item-reveal-inner">
+                    <div class="item-meta">
+                      <span class="item-cat">Quant</span>
+                      <span class="item-created">07 Aug, 21</span>
+                    </div>
+                    <p class="item-desc">NIFTY/BANKNIFTY Historical Max Runs Analysis.</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
           
           <div class="col-lg-4 col-md-6 col-sm-6 col-12 filtr-item"
             data-groups="[&quot;quant&quot;]">
             <div class="item-holder">
-              <a class="image-pop" href="./images/portfolio/weekdayAnalysis.jpg" title="Week- day Returns">
-                 <img src="./images/portfolio/weekdayAnalysis.jpg" alt="Week- day Returns">
+              <a class="image-pop" href="./images/portfolio/weekdayAnalysis.jpg" title="Weekday Returns">
+                <img src="./images/portfolio/weekdayAnalysis.jpg" alt="Weekday Returns">
               </a>
-              <div class="item-caption">
-                <h2 class="mt-2"><a class="text-white" href="./portfolio/00006_weekday_returns_analysis/">Week- day Returns</a></h2>
-                
-                <p class="mb-0 text-light">Quant</p>
-                
-                <div class="item-created text-light">07 Aug, 21</div>
-              </div>
+              <a class="item-caption" href="./portfolio/00006_weekday_returns_analysis/">
+                <h2>Weekday Returns</h2>
+                <div class="item-reveal">
+                  <div class="item-reveal-inner">
+                    <div class="item-meta">
+                      <span class="item-cat">Quant</span>
+                      <span class="item-created">07 Aug, 21</span>
+                    </div>
+                    <p class="item-desc">NIFTY/BANKNIFTY Weekday Returns Analysis.</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
           
           <div class="col-lg-4 col-md-6 col-sm-6 col-12 filtr-item"
             data-groups="[&quot;quant&quot;]">
             <div class="item-holder">
-              <a class="image-pop" href="./images/portfolio/indexRangeForecast.jpg" title="Index Price Fore- cast">
-                 <img src="./images/portfolio/indexRangeForecast.jpg" alt="Index Price Fore- cast">
+              <a class="image-pop" href="./images/portfolio/indexRangeForecast.jpg" title="Index Price Forecast">
+                <img src="./images/portfolio/indexRangeForecast.jpg" alt="Index Price Forecast">
               </a>
-              <div class="item-caption">
-                <h2 class="mt-2"><a class="text-white" href="./portfolio/00005_index_range_forecast/">Index Price Fore- cast</a></h2>
-                
-                <p class="mb-0 text-light">Quant</p>
-                
-                <div class="item-created text-light">31 Jul, 21</div>
-              </div>
+              <a class="item-caption" href="./portfolio/00005_index_range_forecast/">
+                <h2>Index Price Forecast</h2>
+                <div class="item-reveal">
+                  <div class="item-reveal-inner">
+                    <div class="item-meta">
+                      <span class="item-cat">Quant</span>
+                      <span class="item-created">31 Jul, 21</span>
+                    </div>
+                    <p class="item-desc">NIFTY/BANKNIFTY Price Forecast for Option Trading.</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
           
         </div>
         
-        <div class="text-center wow fadeInUp mt-4" data-wow-duration="1.5s">
+        <div class="text-center mt-4">
           <a href="./portfolio" class="btn btn-primary">See More</a>
         </div>
         
@@ -848,44 +878,52 @@
   <div class="container">
     <div class="row">
       <div class="testimonials-container col-lg-8 offset-lg-2">
-        <h1 class="wow fadeInUp" data-wow-duration="1.5s">TESTIMONIALS</h1>
-        <div class="owl-carousel owl-theme wow fadeInUp" data-wow-duration="1.5s">
+        <h1 class="">TESTIMONIALS</h1>
+        <div class="testimonial-grid">
           
-          <div class="single-testimonial">
-            <div class="testimonial-holder">
-              <img class="img-fluid" src="./images/clients/client4.jpg" alt="Geoff Kwitko">
-              <h2>Geoff Kwitko</h2>
-              <span>Made and sold two companies, Called the “Sherlock Holmes” of Digital Marketing in Australia</span>
-              <p><i class="fa fa-quote-left"></i> If this was possible I would give Manuj 7 stars. He is extremely intelligent, knowledgeable and very well organized and detail focused. His math ability is astounding, but he also has a great creative problem solving ability. I couldn&rsquo;t be happier with Manuj! <i class="fa fa-quote-right"></i></p>
-            </div>
-          </div>
+          <figure class="single-testimonial">
+            <blockquote>If this was possible I would give Manuj 7 stars. He is extremely intelligent, knowledgeable and very well organized and detail focused. His math ability is astounding, but he also has a great creative problem solving ability. I couldn&rsquo;t be happier with Manuj!</blockquote>
+            <figcaption class="testimonial-holder">
+              <img class="testimonial-avatar" src="./images/clients/client4.jpg" alt="" loading="lazy" decoding="async">
+              <div>
+                <h2>Geoff Kwitko</h2>
+                <span>Made and sold two companies, Called the “Sherlock Holmes” of Digital Marketing in Australia</span>
+              </div>
+            </figcaption>
+          </figure>
           
-          <div class="single-testimonial">
-            <div class="testimonial-holder">
-              <img class="img-fluid" src="./images/clients/client3.jpg" alt="Stefano Tabacco">
-              <h2>Stefano Tabacco</h2>
-              <span>Lead Back-End Engineer, Skodel, Australia</span>
-              <p><i class="fa fa-quote-left"></i> Manuj has great programming skills. His deep knowledge is also a big plus. He&rsquo;s also a great team worker with a charming personality. <i class="fa fa-quote-right"></i></p>
-            </div>
-          </div>
+          <figure class="single-testimonial">
+            <blockquote>Manuj has great programming skills. His deep knowledge is also a big plus. He&rsquo;s also a great team worker with a charming personality.</blockquote>
+            <figcaption class="testimonial-holder">
+              <img class="testimonial-avatar" src="./images/clients/client3.jpg" alt="" loading="lazy" decoding="async">
+              <div>
+                <h2>Stefano Tabacco</h2>
+                <span>Lead Back-End Engineer, Skodel, Australia</span>
+              </div>
+            </figcaption>
+          </figure>
           
-          <div class="single-testimonial">
-            <div class="testimonial-holder">
-              <img class="img-fluid" src="./images/clients/client1.jpg" alt="Ravi Kant Bahl">
-              <h2>Ravi Kant Bahl</h2>
-              <span>Director, MAGES Studio, Singapore</span>
-              <p><i class="fa fa-quote-left"></i> I know Manuj from last ten years. I know him as a through professional and extremely knowledgeable and passionate about his area of expertise. A thorough gentle man and very honest who is more than willing to help others without expecting anything in return. <i class="fa fa-quote-right"></i></p>
-            </div>
-          </div>
+          <figure class="single-testimonial">
+            <blockquote>I know Manuj from last ten years. I know him as a through professional and extremely knowledgeable and passionate about his area of expertise. A thorough gentle man and very honest who is more than willing to help others without expecting anything in return.</blockquote>
+            <figcaption class="testimonial-holder">
+              <img class="testimonial-avatar" src="./images/clients/client1.jpg" alt="" loading="lazy" decoding="async">
+              <div>
+                <h2>Ravi Kant Bahl</h2>
+                <span>Director, MAGES Studio, Singapore</span>
+              </div>
+            </figcaption>
+          </figure>
           
-          <div class="single-testimonial">
-            <div class="testimonial-holder">
-              <img class="img-fluid" src="./images/clients/client2.jpg" alt="Kamal Bhardwaj">
-              <h2>Kamal Bhardwaj</h2>
-              <span>Worked on Movies such as Tarzan, Iron Man 3, Sully, Okja et. al as VFX Artist</span>
-              <p><i class="fa fa-quote-left"></i> I have known Manuj for past fifteen years and I can very well say that he was instrumental in motivating and inspiring me. His dedication and focus are unparalleled. Always motivated and inspires other to achieve, always raising the bar for himself and all those around him. He is an excellent technical artist with an eye for detail. <i class="fa fa-quote-right"></i></p>
-            </div>
-          </div>
+          <figure class="single-testimonial">
+            <blockquote>I have known Manuj for past fifteen years and I can very well say that he was instrumental in motivating and inspiring me. His dedication and focus are unparalleled. Always motivated and inspires other to achieve, always raising the bar for himself and all those around him. He is an excellent technical artist with an eye for detail.</blockquote>
+            <figcaption class="testimonial-holder">
+              <img class="testimonial-avatar" src="./images/clients/client2.jpg" alt="" loading="lazy" decoding="async">
+              <div>
+                <h2>Kamal Bhardwaj</h2>
+                <span>Worked on Movies such as Tarzan, Iron Man 3, Sully, Okja et. al as VFX Artist</span>
+              </div>
+            </figcaption>
+          </figure>
           
         </div>
       </div>
@@ -898,26 +936,26 @@
 
 
 <style></style>
-<section class="wow fadeInUp section-sm "  data-wow-duration="1.5s">
+<section class="section-sm " >
   <div class="container position-relative z-index-9">
     
-    <div class="fun-facts wow fadeInUp" data-wow-duration="1.5s">
+    <div class="fun-facts">
       
       <div class="fun-fact-holder">
-        <img class="img-fluid" src="./images/icons/works.png" alt="&#43; Years in Industry">
-        <p class="fact-counter count" data-count="20">0</p>
+        <img class="img-fluid" src="./images/icons/works.png" alt="" loading="lazy" decoding="async">
+        <p class="fact-counter count" data-count="20">20</p>
         <p>&#43; Years in Industry</p>
       </div>
       
       <div class="fun-fact-holder">
-        <img class="img-fluid" src="./images/icons/happy.png" alt="&#43; Happy Clients">
-        <p class="fact-counter count" data-count="21">0</p>
+        <img class="img-fluid" src="./images/icons/happy.png" alt="" loading="lazy" decoding="async">
+        <p class="fact-counter count" data-count="21">21</p>
         <p>&#43; Happy Clients</p>
       </div>
       
       <div class="fun-fact-holder">
-        <img class="img-fluid" src="./images/icons/project.png" alt="&#43; Finished Projects">
-        <p class="fact-counter count" data-count="27">0</p>
+        <img class="img-fluid" src="./images/icons/project.png" alt="" loading="lazy" decoding="async">
+        <p class="fact-counter count" data-count="27">27</p>
         <p>&#43; Finished Projects</p>
       </div>
       
@@ -934,9 +972,9 @@
   <div class="container">
     <div class="row">
       <div class="contact-holder col-lg-8 offset-lg-2 col-sm-8 offset-sm-2">
-        <h1 class="wow fadeInUp" data-wow-duration="1.5s">Do you need Data Science and Generative AI?<br>Of course you do!</h1>
+        <h1 class="">Do you need Data Science and Generative AI?<br>Of course you do!</h1>
         <form method="POST" action="https://formspree.io/f/xnqlqagq" data-toggle="validator">
-          <div class="form-container row wow fadeInUp" data-wow-duration="1.5s">
+          <div class="form-container row">
             <div class="form-group col-lg-6">
               <input class="form-control" type="text" name="username" id="username" placeholder="Name"
                 required>
@@ -984,7 +1022,7 @@
           <a href="#home"><i class="fa fa-chevron-up"></i></a>
         </div>
         <div class="credit content">
-          This site is also hosted on <a href="ipns://k2k4r8ln35f2uouxxleya6ae8t5339p7lt7d2ylfsmdz13q7cka42lm7/">IPFS</a>
+          
         </div>
       </div>
     </div>
@@ -1002,8 +1040,6 @@
 
 <script src="./plugins/bootstrap/bootstrap.min.js"></script>
 
-<script src="./plugins/wow.min.js"></script>
-
 <script src="./plugins/text-animation/text-animation.js"></script>
 
 <script src="./plugins/jquery.waypoints.min.js"></script>
@@ -1018,6 +1054,10 @@
 <!-- Main Script -->
 
 <script src="./js/script.min.js"></script>
+
+<!-- Hero mosaic -->
+
+<script src="./js/hero-mosaic.min.js" defer></script>
 
 <!-- google analitycs -->
 </body>

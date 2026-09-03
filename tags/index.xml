@@ -4,81 +4,66 @@
     <title>Tags on Data Science Solutions</title>
     <link>/tags/</link>
     <description>Recent content in Tags on Data Science Solutions</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>This site is also hosted on [IPFS](ipns://k2k4r8ln35f2uouxxleya6ae8t5339p7lt7d2ylfsmdz13q7cka42lm7/)</copyright>
-    <lastBuildDate>Sat, 01 May 2021 12:14:34 +0600</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 May 2021 12:14:34 +0600</lastBuildDate>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>data_science</title>
+      <title>Data_science</title>
       <link>/tags/data_science/</link>
       <pubDate>Sat, 01 May 2021 12:14:34 +0600</pubDate>
-      
       <guid>/tags/data_science/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>batchfile</title>
+      <title>Batchfile</title>
       <link>/tags/batchfile/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
-      
       <guid>/tags/batchfile/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>c#</title>
-      <link>/tags/c#/</link>
+      <title>C#</title>
+      <link>/tags/c%23/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
-      
-      <guid>/tags/c#/</guid>
+      <guid>/tags/c%23/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>/tags/linux/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
-      
       <guid>/tags/linux/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>productivity</title>
+      <title>Productivity</title>
       <link>/tags/productivity/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
-      
       <guid>/tags/productivity/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>python</title>
+      <title>Python</title>
       <link>/tags/python/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
-      
       <guid>/tags/python/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>shell</title>
+      <title>Shell</title>
       <link>/tags/shell/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
-      
       <guid>/tags/shell/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>windows</title>
+      <title>Windows</title>
       <link>/tags/windows/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
-      
       <guid>/tags/windows/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

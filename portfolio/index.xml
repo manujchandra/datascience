@@ -4,99 +4,80 @@
     <title>Portfolio on Data Science Solutions</title>
     <link>/portfolio/</link>
     <description>Recent content in Portfolio on Data Science Solutions</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>This site is also hosted on [IPFS](ipns://k2k4r8ln35f2uouxxleya6ae8t5339p7lt7d2ylfsmdz13q7cka42lm7/)</copyright>
-    <lastBuildDate>Wed, 10 Jul 2024 13:03:46 +0530</lastBuildDate><atom:link href="/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Jul 2024 13:03:46 +0530</lastBuildDate>
+    <atom:link href="/portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ViperOS</title>
       <link>/portfolio/00010_viperos/</link>
       <pubDate>Wed, 10 Jul 2024 13:03:46 +0530</pubDate>
-      
       <guid>/portfolio/00010_viperos/</guid>
-      <description>A Vim-inspired, Python-powered and keyboard-centric GNU/Linux distribution built for makers. Why another GNU/Linux Distro?</description>
+      <description>&lt;h1 id=&#34;a-vim-inspired-python-powered-and-keyboard-centric-gnulinux-distribution-built-for-makers&#34;&gt;A Vim-inspired, Python-powered and keyboard-centric GNU/Linux distribution built for makers.&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-another-gnulinux-distro&#34;&gt;Why another GNU/Linux Distro?&lt;/h2&gt;&#xA;&lt;h3 id=&#34;a-spark-ignited-2001&#34;&gt;A Spark Ignited (2001)&lt;/h3&gt;&#xA;&lt;p&gt;It was the early 2000s, a time when the internet was a luxury, accessible only through the bustling cyber cafes that dotted the cityscape. I was just another teenager, fascinated by the world of computers and technology. Every month, I eagerly awaited the arrival of my favorite computer magazine, Chip. The glossy pages were filled with articles that fueled my curiosity, but it was the accompanying CDs that truly captivated me. One fateful day, one of those CDs contained something that would change my life forever: a free and open-source operating system called Knoppix. The concept was revolutionary. Here was an entire OS that I could explore without installing it on my computer—just pop in the CD and dive in. The freedom to tinker with Knoppix for hours on end, exploring its nooks and crannies, kindled a deep-seated fascination with the world of GNU/Linux. While I didn&amp;rsquo;t accomplish any significant tasks on Knoppix, the sheer act of exploration was intoxicating. It was a playground for my imagination and a canvas for my evolving technical skills.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Core Trader Back Tester</title>
       <link>/portfolio/00009_introducing_coretrader/</link>
       <pubDate>Sat, 04 Dec 2021 17:03:46 +0530</pubDate>
-      
       <guid>/portfolio/00009_introducing_coretrader/</guid>
-      <description>Introducing CoreTrader - An Object-Oriented, State-Based, Messaging-Enabled Backtester In this demonstration, we have demonstrated CoreTrader which is an easy to use Object-Oriented, State-Based, Messaging-Enabled Backtester.</description>
+      <description>&lt;h1 id=&#34;introducing-coretrader---an-object-oriented-state-based-messaging-enabled-backtester&#34;&gt;Introducing CoreTrader - An Object-Oriented, State-Based, Messaging-Enabled Backtester&lt;/h1&gt;&#xA;&lt;p&gt;In this demonstration, we have demonstrated CoreTrader which is an easy to use Object-Oriented, State-Based, Messaging-Enabled Backtester.&lt;/p&gt;</description>
     </item>
-    
     <item>
-      <title>Custom Dura- tion Returns</title>
+      <title>Custom Duration Returns</title>
       <link>/portfolio/00008_duration_returns/</link>
       <pubDate>Sat, 07 Aug 2021 13:03:34 +0530</pubDate>
-      
       <guid>/portfolio/00008_duration_returns/</guid>
-      <description>NIFTY/BANKNIFTY Custom Duration Return Analysis This study analyses the returns of an instrument over a user specified time period.</description>
+      <description>&lt;h1 id=&#34;niftybanknifty-custom-duration-return-analysis&#34;&gt;NIFTY/BANKNIFTY Custom Duration Return Analysis&lt;/h1&gt;&#xA;&lt;p&gt;This study analyses the returns of an instrument over a user specified time period. For example, if someone wants to know the returns generated over a period of 7 days, or any other time period, the app can dynamically calculate the same.&lt;/p&gt;</description>
     </item>
-    
     <item>
-      <title>Histo- rical Max Runs</title>
+      <title>Historical Max Runs</title>
       <link>/portfolio/00007_historical_max_runs/</link>
       <pubDate>Sat, 07 Aug 2021 12:54:34 +0530</pubDate>
-      
       <guid>/portfolio/00007_historical_max_runs/</guid>
-      <description>NIFTY/BANKNIFTY Historical Max Runs Analysis This is a range analysis study.</description>
+      <description>&lt;h1 id=&#34;niftybanknifty-historical-max-runs-analysis&#34;&gt;NIFTY/BANKNIFTY Historical Max Runs Analysis&lt;/h1&gt;&#xA;&lt;p&gt;This is a range analysis study. It calculates the maximum advances and declines of an instrument over a period specified by the user and generates meaningful charts and analysis to help project future price targets.&lt;/p&gt;</description>
     </item>
-    
     <item>
-      <title>Week- day Returns</title>
+      <title>Weekday Returns</title>
       <link>/portfolio/00006_weekday_returns_analysis/</link>
       <pubDate>Sat, 07 Aug 2021 12:40:34 +0530</pubDate>
-      
       <guid>/portfolio/00006_weekday_returns_analysis/</guid>
-      <description>NIFTY/BANKNIFTY Weekday Returns Analysis Usually when we analyse an instrument, we do so on a daily, weekly, monthly or yearly basis.</description>
+      <description>&lt;h1 id=&#34;niftybanknifty-weekday-returns-analysis&#34;&gt;NIFTY/BANKNIFTY Weekday Returns Analysis&lt;/h1&gt;&#xA;&lt;p&gt;Usually when we analyse an instrument, we do so on a daily, weekly, monthly or yearly basis. Here I attempted to create a tool to analyse an underlying on a weekday basis. This tool proved helpful especially for intraday traders who want to maximize their probability of winning a trade.&lt;/p&gt;</description>
     </item>
-    
     <item>
-      <title>Index Price Fore- cast</title>
+      <title>Index Price Forecast</title>
       <link>/portfolio/00005_index_range_forecast/</link>
       <pubDate>Sat, 31 Jul 2021 12:30:34 +0530</pubDate>
-      
       <guid>/portfolio/00005_index_range_forecast/</guid>
-      <description>NIFTY/BANKNIFTY Price Forecast Study This tool demonstrates a tool that could be useful for Option Traders.</description>
+      <description>&lt;h1 id=&#34;niftybanknifty-price-forecast-study&#34;&gt;NIFTY/BANKNIFTY Price Forecast Study&lt;/h1&gt;&#xA;&lt;p&gt;This tool demonstrates a tool that could be useful for Option Traders. This is a price range forecast tool for NIFTY and BANKNIFTY. The user can choose the training period and the forecast period. The tool also helps in calculating the probability of price closing between any two price points. Watch the video to learn more features.&lt;/p&gt;</description>
     </item>
-    
     <item>
-      <title>Corre- lation Analysis</title>
+      <title>Correlation Analysis</title>
       <link>/portfolio/00002_nifty50_correlation/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0530</pubDate>
-      
       <guid>/portfolio/00002_nifty50_correlation/</guid>
-      <description>NIFTY50 52 week Correlation Analysis The study presented in this project is a stock and sector wise correlation analysis of NIFTY50 over a period of 52 weeks.</description>
+      <description>&lt;h1 id=&#34;nifty50-52-week-correlation-analysis&#34;&gt;NIFTY50 52 week Correlation Analysis&lt;/h1&gt;&#xA;&lt;p&gt;The study presented in this project is a stock and sector wise correlation analysis of NIFTY50 over a period of 52 weeks. I usually update this every year.&lt;/p&gt;</description>
     </item>
-    
     <item>
-      <title>Intro to Back- trader</title>
+      <title>Intro to Backtrader</title>
       <link>/portfolio/00001_introduction_to_backtrader/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0530</pubDate>
-      
       <guid>/portfolio/00001_introduction_to_backtrader/</guid>
-      <description>Introduction to Backtrader Backtrader is a great back-testing framework for Python.</description>
+      <description>&lt;h1 id=&#34;introduction-to-backtrader&#34;&gt;Introduction to Backtrader&lt;/h1&gt;&#xA;&lt;p&gt;Backtrader is a great back-testing framework for Python. It also allows for the ability to deploy your algorithm using brokers like Interactive Brokers.&lt;/p&gt;</description>
     </item>
-    
     <item>
-      <title>Port- folio Optimi- zation</title>
+      <title>Portfolio Optimization</title>
       <link>/portfolio/00003_portfolio_optimization/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0530</pubDate>
-      
       <guid>/portfolio/00003_portfolio_optimization/</guid>
-      <description>Portfolio Optimization “Modern Portfolio Theory (MPT), a hypothesis put forth by Harry Markowitz in his paper “Portfolio Selection,” (published in 1952 by the Journal of Finance) is an investment theory based on the idea that risk-averse investors can construct portfolios to optimize or maximize expected return based on a given level of market risk, emphasizing that risk is an inherent part of higher reward.</description>
+      <description>&lt;h1 id=&#34;portfolio-optimization&#34;&gt;Portfolio Optimization&lt;/h1&gt;&#xA;&lt;p&gt;“Modern Portfolio Theory (MPT), a hypothesis put forth by Harry Markowitz in his paper “Portfolio Selection,” (published in 1952 by the Journal of Finance) is an investment theory based on the idea that risk-averse investors can construct portfolios to optimize or maximize expected return based on a given level of market risk, emphasizing that risk is an inherent part of higher reward. It is one of the most important and influential economic theories dealing with finance and investment.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>SIP Returns</title>
       <link>/portfolio/00004_sip_returns/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0530</pubDate>
-      
       <guid>/portfolio/00004_sip_returns/</guid>
-      <description>SIP Return Analysis Extract from Money: Master the Game by Tony Robbins chapter 2.</description>
+      <description>&lt;h1 id=&#34;sip-return-analysis&#34;&gt;SIP Return Analysis&lt;/h1&gt;&#xA;&lt;h2 id=&#34;extract-from-money-master-the-game-by-tony-robbins-chapter-23-&#34;&gt;Extract from Money: Master the Game by Tony Robbins chapter 2.3 :&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Below is a chart showing a hypothetical market that is up and down like a roller coaster. Up 50%, down 50%, up 50%, and down 50%. This produces an average return of 0%. And like you, I would expect that a 0% return would mean that I didn’t lose any money. And we would both be wrong!&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
