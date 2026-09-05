@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on Data Science Solutions</title>
+    <title>Linux on Data Science, Agent Governance &amp; Corporate Training</title>
     <link>/categories/linux/</link>
-    <description>Recent content in Linux on Data Science Solutions</description>
+    <description>Recent content in Linux on Data Science, Agent Governance &amp; Corporate Training</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>This site is also hosted on [IPFS](ipns://k2k4r8ln35f2uouxxleya6ae8t5339p7lt7d2ylfsmdz13q7cka42lm7/)</copyright>
     <lastBuildDate>Wed, 10 Jul 2024 13:03:46 +0530</lastBuildDate>
     <atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ViperOS</title>
-      <link>/portfolio/00010_viperos/</link>
+      <title>Shortcut</title>
+      <link>/portfolio/00010_shortcut/</link>
       <pubDate>Wed, 10 Jul 2024 13:03:46 +0530</pubDate>
-      <guid>/portfolio/00010_viperos/</guid>
+      <guid>/portfolio/00010_shortcut/</guid>
       <description>&lt;h1 id=&#34;a-vim-inspired-python-powered-and-keyboard-centric-gnulinux-distribution-built-for-makers&#34;&gt;A Vim-inspired, Python-powered and keyboard-centric GNU/Linux distribution built for makers.&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-another-gnulinux-distro&#34;&gt;Why another GNU/Linux Distro?&lt;/h2&gt;&#xA;&lt;h3 id=&#34;a-spark-ignited-2001&#34;&gt;A Spark Ignited (2001)&lt;/h3&gt;&#xA;&lt;p&gt;It was the early 2000s, a time when the internet was a luxury, accessible only through the bustling cyber cafes that dotted the cityscape. I was just another teenager, fascinated by the world of computers and technology. Every month, I eagerly awaited the arrival of my favorite computer magazine, Chip. The glossy pages were filled with articles that fueled my curiosity, but it was the accompanying CDs that truly captivated me. One fateful day, one of those CDs contained something that would change my life forever: a free and open-source operating system called Knoppix. The concept was revolutionary. Here was an entire OS that I could explore without installing it on my computer—just pop in the CD and dive in. The freedom to tinker with Knoppix for hours on end, exploring its nooks and crannies, kindled a deep-seated fascination with the world of GNU/Linux. While I didn&amp;rsquo;t accomplish any significant tasks on Knoppix, the sheer act of exploration was intoxicating. It was a playground for my imagination and a canvas for my evolving technical skills.&lt;/p&gt;</description>
     </item>
   </channel>
