@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Lipstick on a Snake</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description"
+    content="Type hints, Pydantic and asyncio are valuable tools - but they do not turn CPython into a statically typed, automatically parallel runtime.">
+  
+  <meta name="author" content="Manuj Chandra">
+  <meta name="generator" content="Hugo 0.157.0">
+
+  
+  
+  <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="../../plugins/magnific-popup/magnific-popup.css">
+  
+  <link rel="stylesheet" href="../../plugins/text-animation/text-animation.css">
+  
+
+  
+  
+  <link rel="stylesheet" href="../../css/style.min.css" media="screen">
+
+  
+  
+  <link rel="stylesheet" href="../../css/custom.min.css" media="screen">
+
+  
+  <link rel="shortcut icon" href="../../images/favicon_hu_b9038080f9992a01.webp">
+  <link rel="icon" href="../../images/favicon_hu_b9038080f9992a01.webp">
+
+  
+  
+
+  
+  <meta property="og:image" content="/images/blog/lipstick-on-a-snake_hu_11366d33448d1d35.webp" />
+  
+  <meta property="og:url" content="/blog/00003_lipstick_on_a_snake/">
+  <meta property="og:site_name" content="Data Science, Agent Governance & Corporate Training">
+  <meta property="og:title" content="Lipstick on a Snake">
+  <meta property="og:description" content="Type hints, Pydantic and asyncio are valuable tools - but they do not turn CPython into a statically typed, automatically parallel runtime.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-09-17T09:00:00+05:30">
+    <meta property="article:modified_time" content="2026-09-17T09:00:00+05:30">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="C#">
+    <meta property="article:tag" content="Performance">
+    <meta property="article:tag" content="Type_safety">
+    <meta property="article:tag" content="Concurrency">
+    <meta property="article:tag" content="Software_engineering">
+
+  
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader" role="status" aria-label="Loading">
+  <div class="preloader-mark"></div>
+</div>
+<!-- preloader end -->
+
+
+<section class="menu menu-fix" id="home">
+  <nav>
+    
+    <div class="menu-container menu-normal">
+      <ul class="desktop-menu list-inline mb-0 justify-content-end" id="desktop-menu">
+        <a class="mr-auto" href="../../">
+          
+          <img class="img-fluid" width="150px" src="../../images/logo_hu_dc59a6b2dd60e6cb.webp"
+            alt="Data Science, Agent Governance &amp; Corporate Training">
+          
+        </a>
+        
+        <li class="menu-item menu-item-transparent dark hvr-underline-from-left 1"><a href="../../">Home</a></li>
+        
+        <li class="menu-item menu-item-transparent dark hvr-underline-from-left 1"><a href="../../#about">About me</a></li>
+        
+        <li class="menu-item menu-item-transparent dark hvr-underline-from-left 1"><a href="../../#service">Service</a></li>
+        
+        <li class="menu-item menu-item-transparent dark hvr-underline-from-left 1"><a href="../../#portfolio">Portfolio</a></li>
+        
+        <li class="menu-item menu-item-transparent dark hvr-underline-from-left 1"><a href="../../#testimonial">Testimonial</a></li>
+        
+        <li class="menu-item menu-item-transparent dark hvr-underline-from-left 1"><a href="../../#contact">Contact</a></li>
+        
+        <li class="menu-item menu-item-transparent dark hvr-underline-from-left 1"><a href="../../blog">Blog</a></li>
+        
+      </ul>
+      
+      
+
+      
+      <div class="mobile-menu">
+        <a class="menu-link">
+          <div class="mobile-menu-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+        <div class="mobile-menu-logo"><a href="../../"><img class="img-fluid"
+              src="../../images/logo-dark_hu_956e0ea28683b30e.webp" alt="Data Science, Agent Governance &amp; Corporate Training"></a>
+        </div>
+        <div class="menu-slider">
+          <nav>
+            <ul class="mobile-menu-list">
+              
+              <li class="hvr-shutter-out-vertical mobile-menu-item 1"><a href="../../">Home</a></li>
+              
+              <li class="hvr-shutter-out-vertical mobile-menu-item 1"><a href="../../#about">About me</a></li>
+              
+              <li class="hvr-shutter-out-vertical mobile-menu-item 1"><a href="../../#service">Service</a></li>
+              
+              <li class="hvr-shutter-out-vertical mobile-menu-item 1"><a href="../../#portfolio">Portfolio</a></li>
+              
+              <li class="hvr-shutter-out-vertical mobile-menu-item 1"><a href="../../#testimonial">Testimonial</a></li>
+              
+              <li class="hvr-shutter-out-vertical mobile-menu-item 1"><a href="../../#contact">Contact</a></li>
+              
+              <li class="hvr-shutter-out-vertical mobile-menu-item 1"><a href="../../blog">Blog</a></li>
+              
+            </ul>
+            
+            <ul class="mobile-menu-icons list-inline">
+              
+              <li><a href="https://github.com/magnacore"><i class="fab fa-github"></i></a></li>
+              
+              <li><a href="https://gitlab.com/magnacore"><i class="fab fa-gitlab"></i></a></li>
+              
+              <li><a href="https://www.linkedin.com/in/manuj/"><i class="fab fa-linkedin"></i></a></li>
+              
+              <li><a href="https://www.youtube.com/channel/UC4znd_SgcCA1VvWKqwz932w"><i class="fab fa-youtube"></i></a></li>
+              
+              <li><a href="https://www.youtube.com/channel/UCmM1In0bl5ZEWyb-bprql_Q"><i class="fab fa-youtube"></i></a></li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<div style="height: 50px;"></div>
+
+
+
+
+
+<style>.content > h1:first-child { display: none; }</style>
+<section class="section " >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mb-4 mb-lg-0">
+        <div class="">
+          <img src="../../images/blog/lipstick-on-a-snake_hu_11366d33448d1d35.webp" alt="" class="img-fluid w-100 mb-5" loading="lazy" decoding="async">
+          <div class="about-me-text mb-4">
+            <h1>Lipstick on a Snake</h1>
+          </div>
+          <div class="content"><h1 id="lipstick-on-a-snake">Lipstick on a Snake</h1>
+<h2 id="type-hints-pydantic-and-asyncio-are-valuable-tools--but-they-do-not-turn-cpython-into-a-statically-typed-automatically-parallel-runtime">Type hints, Pydantic and asyncio are valuable tools — but they do not turn CPython into a statically typed, automatically parallel runtime</h2>
+<p><strong>TL;DR</strong> — Teams need a <em>scripting</em> language, so they reach for Python, and they are right to. Later the same code needs to be <em>production software</em>, and instead of reconsidering the language they try to shoehorn Python into the role: Pydantic everywhere, type hints and linters, <code>asyncio</code> sprayed across the call graph, each one adding to the feeling of working in a type-safe, multithreaded language. Applying lipstick on a snake still makes it a snake. None of it reaches the runtime — Pydantic and linter hints do not make Python type safe, <code>asyncio</code> does not make it multithreaded, and the interpreter underneath stays exactly as dynamically typed and exactly as slow as it was.</p>
+<p><strong>And the bill lands precisely where Python&rsquo;s value was.</strong> You chose it because it reads like English — executable pseudocode that a new hire can follow on their first morning. By the time every band-aid is applied, what you are maintaining looks like <code>AsyncIterator[tuple[int, Result[Order, ValidationError]]]</code>: three-line signatures, half the imports coming from <code>typing</code>, and the business logic reduced to a minority shareholder in its own file. The code has become cryptic — and it bought no runtime type safety and no parallelism in exchange. You traded away the one thing Python was unambiguously best at, and got nothing enforceable back. In fairness the tools are not useless: <code>mypy</code> caught every bug I threw at it. But it is advisory, silenced by a fourteen-character comment, weakest at the untyped boundaries where bad data actually arrives, and gone entirely once the program is running.</p>
+<p>The measurements, on one machine, sources published: eight CPU-bound tasks take 2.569s on stock CPython 3.14 and 0.109s in C# — about <strong>24x</strong>. <code>asyncio.gather</code> returns <strong>1.00x</strong>, because it was never a parallelism tool. Free-threaded Python is the one genuine fix and really does deliver <strong>6.04x</strong>, but it is a separate interpreter and an ABI migration for every compiled dependency, and still ~20x slower than C#. No band-aid turns CPython into a fast, statically typed, parallel runtime.</p>
+<p>So for that much trouble, use a language built for the job. C# now runs a single file with a shebang — no project, no scaffolding — and <a href="https://github.com/tonybaloney/CSnakes">CSnakes</a> embeds CPython in-process, so NumPy and PyTorch stay available while your application logic gets real type safety, compiled speed and an LTS support horizon. The old objection was the syntax barrier, and AI-assisted coding has largely dissolved it — but the sharper point runs the other way: <strong>static types make AI-assisted code safer.</strong> Generated code is exactly the code nobody reviewed line by line, a compiler reviews every line of it for free, and reasoning reliably about code with no enforced contracts is the thing AI is worst at. My rule of thumb: Rust instead of C, C# instead of C++ and instead of Python-pretending-to-be-C#, and Python or Lua where scripting is genuinely the job. One honest exception — for exploratory, notebook-shaped work, Python and Jupyter still win outright.</p>
+<hr>
+<p>There is a story I have watched play out in production teams more times than I can count. It always starts the same way, and it always ends the same way.</p>
+<p>It starts with a genuine need for a <strong>scripting language</strong>. Someone has to stitch two systems together, parse a directory of CSVs, poke an API on a schedule, glue a model to a queue. Python is often the obvious, correct answer. It is widely available, it reads like pseudocode, and you can go from an empty file to a working thing in ten minutes.</p>
+<p>Then the script survives. It gets a second feature. It gets a cron entry. It gets a second author. Somewhere in there, quietly, the requirement changes from a short-lived script to <strong>long-lived production software</strong> — the thing that needs to be correct at 3 a.m., maintained by someone who did not write it, and fast enough that the bill stops growing.</p>
+<p>And this is where the trouble begins. Instead of admitting that the requirement changed, the team tries to change Python into something it is not.</p>
+<p>Out come the band-aids. Type hints. <code>mypy</code> in strict mode. Pydantic models on everything. <code>asyncio</code> sprayed across the call graph. Protocols, <code>TypedDict</code>, <code>Literal</code>, generics, overloads, <code>ruff</code>, <code>pyright</code>, a <code>pyproject.toml</code> that is longer than most of the modules it governs. The team now <em>feels</em> like it is working in a type-safe, concurrent, enterprise-grade language.</p>
+<p>It is not. It is working in Python with a lot of extra steps.</p>
+<blockquote>
+<p>Applying lipstick on a snake still makes it a snake.</p>
+</blockquote>
+<p>Every benchmark result and diagnostic quoted in this post was produced on the machine I wrote it on. The setup is at the end.</p>
+<hr>
+<h2 id="what-the-band-aids-actually-do">What the band-aids actually do</h2>
+<p>Every one of these tools is a good tool. That is not the argument. The argument is about what people believe they are buying versus what they are actually getting.</p>
+<ul>
+<li><strong>Type hints + <code>mypy</code>/<code>pyright</code>:</strong> They promise type safety. They provide a separate, advisory checker over annotations the runtime never enforces.</li>
+<li><strong>Pydantic:</strong> It promises typed data models. It provides runtime validation — and, by default, coercion — at the boundaries where you invoke it.</li>
+<li><strong><code>asyncio</code>:</strong> It is often mistaken for multithreading. A single event loop provides cooperative concurrency; CPU work only goes parallel if you hand it to an executor.</li>
+<li><strong><code>multiprocessing</code>:</strong> It promises cheap parallelism. It provides separate interpreters, serialized data, and a new class of bugs.</li>
+<li><strong>Dataclasses:</strong> They promise typed records. They generate <code>__init__</code>, <code>__eq__</code>, and <code>__repr__</code>, and optionally emulate immutability with <code>frozen=True</code>; field types are not enforced.</li>
+<li><strong><code>attrs</code>:</strong> It offers the same record-building conveniences, plus genuine runtime validators and converters if you write them.</li>
+<li><strong><code>Protocol</code>:</strong> It resembles an interface. It provides static structural typing; <code>@runtime_checkable</code> adds <code>isinstance</code>, but checks member presence rather than signatures or types.</li>
+</ul>
+<p>Let us take the two big ones seriously.</p>
+<h3 id="type-hints-do-not-make-python-type-safe">Type hints do not make Python type safe</h3>
+<p>This is legal, ships to production, and runs:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(a: int, b: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> b
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>add(<span style="color:#e6db74">&#34;1&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span>)   <span style="color:#75715e"># &#39;12&#39;</span>
+</span></span></code></pre></div><p>The annotations are still right there at runtime — <code>add.__annotations__</code> reports <code>{'a': int, 'b': int, 'return': int}</code> — and the interpreter does not consult them. They are metadata. <code>mypy</code> will complain; CPython will hand you a string.</p>
+<p>That distinction sounds academic until you remember where bugs actually come from: the untyped third-party library, the <code>dict</code> that came off a queue, the <code>json.loads</code> that returns <code>Any</code>, the <code># type: ignore</code> someone added at 6 p.m. on a Friday because the release was blocked.</p>
+<p>And <code>Any</code> is contagious. Do not take my word for it — this passes <code>mypy --strict</code>, a common &ldquo;we do typing properly&rdquo; preset, with zero errors:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> Any
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">retries</span>(n: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> n <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>(cfg: dict[str, Any]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> retries(cfg[<span style="color:#e6db74">&#34;retries&#34;</span>])
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ mypy --strict config.py
+</span></span><span style="display:flex;"><span>Success: no issues found in 1 source file
+</span></span></code></pre></div><p>Then you run it against a config where that field happens to be a string:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>run({<span style="color:#e6db74">&#34;retries&#34;</span>: <span style="color:#e6db74">&#34;3&#34;</span>})     <span style="color:#75715e"># &#39;33&#39;</span>
+</span></span></code></pre></div><p><code>retries</code> is annotated <code>int</code>. It received a <code>str</code>, returned a <code>str</code>, and mypy&rsquo;s strict preset pronounced the file clean. Nothing in CI turned red.</p>
+<p>To be scrupulous, there are two honest objections to that example, and both are worth making because they sharpen the point rather than blunt it.</p>
+<p><strong>First, <code>Any</code> was my choice, not Python&rsquo;s.</strong> If I annotate the parameter <code>dict[str, object]</code> instead, mypy catches it immediately:</p>
+<pre tabindex="0"><code>error: Argument 1 to &#34;retries&#34; has incompatible type &#34;object&#34;; expected &#34;int&#34;  [arg-type]
+</code></pre><p>That is the correct advice, and mypy&rsquo;s own documentation gives it: prefer <code>object</code> when you do not know, because <code>Any</code> switches checking off locally while <code>object</code> forces you to narrow. If you take one practical thing from this post, take that.</p>
+<p><strong>Second, stricter flags exist.</strong> <code>--disallow-any-expr</code> rejects the original — though not, as I first thought, every expression that touches deserialised data; a <code>cast</code> or an assignment to an explicitly typed variable satisfies it.</p>
+<p>So why does the example still matter? Because of what the standard library hands you:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ mypy --strict revealed.py
+</span></span><span style="display:flex;"><span>note: Revealed type is &#34;Any&#34;          # json.loads(&#34;{}&#34;)
+</span></span></code></pre></div><p><code>json.loads</code> is annotated to return <code>Any</code>, and many untyped third-party APIs also appear as <code>Any</code> to a checker. <code>Any</code> is not an exotic thing a careless developer has to opt into — it is common after deserialisation or at an untyped boundary. You have to annotate, narrow, or validate that value deliberately to get useful static checking back.</p>
+<p>And that conversion is not free. Doing it properly means narrowing at every single access:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>(cfg: dict[str, object]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>    v <span style="color:#f92672">=</span> cfg[<span style="color:#e6db74">&#34;retries&#34;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isinstance(v, int):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">TypeError</span>(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;retries must be int, got </span><span style="color:#e6db74">{</span>type(v)<span style="color:#f92672">.</span>__name__<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> retries(v)
+</span></span></code></pre></div><p>That passes <code>--strict</code> cleanly, and it is the right way to write it. Notice what it actually is, though: a hand-rolled runtime type check. Which is precisely the job Pydantic exists to automate — and precisely the admission underneath this whole section. The way to get type safety at a Python boundary is to <em>check types at runtime</em>, because the annotations will not do it for you.</p>
+<p>If you want a sense of the direction of travel, look at what 3.14 did to annotations. PEP 649 made them <em>lazily evaluated</em>: they are no longer computed when the function is defined, only if something actually asks for them. You can watch it happen:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Python 3.13</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(x: ThisNameDoesNotExist) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>: <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># NameError at definition time</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Python 3.14</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(x: ThisNameDoesNotExist) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>: <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># fine — nothing is evaluated until you touch f.__annotations__</span>
+</span></span></code></pre></div><p>That is a sensible change, and it makes forward references and import cycles much less painful. Note that 3.14 deliberately <em>preserves</em> runtime introspection — there is a whole new <code>annotationlib</code> module for reading annotations on purpose, and frameworks like Pydantic and FastAPI are built around that pattern. Annotations are available to runtime consumers; CPython itself does not enforce them.</p>
+<p>What they are not is <em>automatically enforced</em>. The flagship typing change in the newest Python made the interpreter work harder to avoid evaluating your hints unless something asks. They became lazier, not binding. If you want them to mean something at runtime, a library has to reach in and make it so — which is the difference this whole post turns on.</p>
+<p>Here is the crux:</p>
+<p><strong>A type system you can ignore is a style guide.</strong></p>
+<p>The difference between a linter and a compiler is not sophistication. It is <em>who holds the veto</em>. <code>mypy</code> files a complaint. A compiler refuses to produce a binary. One of those is a guarantee; the other is a strongly worded suggestion, and in a large team under deadline pressure, strongly worded suggestions lose.</p>
+<p>Look at what strict typing does to the source, too:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process</span>(
+</span></span><span style="display:flex;"><span>    items: Sequence[Mapping[str, Any]],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>,
+</span></span><span style="display:flex;"><span>    handler: Callable[[Mapping[str, Any]], Awaitable[Result[Order, ValidationError]]],
+</span></span><span style="display:flex;"><span>    retries: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>) <span style="color:#f92672">-&gt;</span> AsyncIterator[tuple[int, Result[Order, ValidationError]]]:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>Whatever that is, it is not the language you chose because it read like pseudocode. You have paid much of the syntactic and maintenance cost of a static language without moving those type guarantees into the runtime or making the checker mandatory.</p>
+<h3 id="pydantic-is-a-validator-not-a-type-system">Pydantic is a validator, not a type system</h3>
+<p>Pydantic is genuinely excellent at its actual job: checking untrusted data at the edge of your program. But it is doing that <em>at runtime</em>, <em>at a cost</em>, and <em>only where you put it</em>. It is a border checkpoint, not a passport system.</p>
+<p>It also coerces, which is not the same as validating:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Order</span>(BaseModel):
+</span></span><span style="display:flex;"><span>    id: int
+</span></span><span style="display:flex;"><span>    total: Decimal
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>o <span style="color:#f92672">=</span> Order(id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;7&#34;</span>, total<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;19.99&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># o.id    -&gt; 7            (int, silently converted from str)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># o.total -&gt; Decimal(&#39;19.99&#39;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>o<span style="color:#f92672">.</span>model_dump()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># {&#39;id&#39;: 7, &#39;total&#39;: Decimal(&#39;19.99&#39;)}   &lt;- a plain dict again</span>
+</span></span></code></pre></div><p>A string became an integer and nobody was told. In fairness, that is the <em>default</em> behaviour and Pydantic gives you a way out: strict mode, available per-model, per-field, or per-call, rejects <code>&quot;7&quot;</code> for an <code>int</code> instead of converting it. If you use Pydantic, turn it on. Its documented guarantee is about the types of the resulting model&rsquo;s fields, not about preserving what you passed in — so lax mode is doing what it says, just not what most people assume it says.</p>
+<p>The deeper point survives strict mode, though, and it is the last line of that snippet. Inside the model, the data is validated and the types are real. One <code>.model_dump()</code> later it is an ordinary <code>dict</code> — the values are still the validated ones, nothing is undone — but the <em>guarantee</em> does not travel with them. Every downstream function that receives that dict is back to trusting annotations the runtime does not check, and Pydantic is no longer in the room.</p>
+<h3 id="asyncio-is-not-multithreading"><code>asyncio</code> is not multithreading</h3>
+<p>This is the most consequential misunderstanding of the set, because people reach for <code>asyncio</code> to make things <em>fast</em>.</p>
+<p>So let us measure it. The workload is deliberately boring: eight independent CPU-bound tasks, each a five-million-iteration integer loop. Forty million iterations total, no I/O, no library calls.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>N, K, M <span style="color:#f92672">=</span> <span style="color:#ae81ff">5_000_000</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">1_000_000_007</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">crunch</span>(n):
+</span></span><span style="display:flex;"><span>    s <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n): s <span style="color:#f92672">=</span> (s <span style="color:#f92672">+</span> i <span style="color:#f92672">*</span> i) <span style="color:#f92672">%</span> M
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> s
+</span></span></code></pre></div><p>Run that eight times sequentially, then through <code>threading</code>, then through <code>asyncio.gather</code>, then through <code>multiprocessing</code>, on a machine with eight cores and sixteen hardware threads:</p>
+<pre tabindex="0"><code>python 3.14.7
+  sequential        2.569s  1.00x
+  threading(8)      2.486s  1.03x
+  asyncio.gather    2.566s  1.00x
+  multiprocessing   0.510s  5.04x
+</code></pre><p>That is Python 3.14, the newest release, on sixteen available hardware threads. Eight threads bought <strong>1.03x</strong>. <code>asyncio.gather</code> over eight coroutines bought <strong>1.00x</strong> — that is not a typo, and not a rounding artefact. It is the same 2.5 seconds whether you write the loop plainly or wrap it in coroutines and a <code>gather</code> call. The GIL means one bytecode-executing thread at a time, and <code>asyncio</code> does not even try: with no <code>await</code> inside <code>crunch</code>, the first coroutine runs to completion, blocking the entire event loop — and with it every other task, every timer, every socket read — before the second one starts.</p>
+<p>Only <code>multiprocessing</code> delivers here, and it does so by giving up on threads entirely: eight separate processes and interpreters. In this <code>ProcessPoolExecutor</code> design, calls and results are serialized across process boundaries. Process startup, scheduling, IPC, and hardware effects all help explain why the result is about 5x rather than the ideal 8x; large or unpicklable inputs can make matters worse. <code>shared_memory</code>, <code>Value</code>, and <code>Array</code> can avoid some copying, but require an explicit shared-data layout. Managers provide proxies, but still involve IPC and serialization.</p>
+<p><code>asyncio</code> is cooperative concurrency for <strong>I/O waiting</strong>. It lets one thread hold ten thousand idle sockets. That is a real and valuable thing, and for an I/O-bound web service it is the right tool.</p>
+<p>To be precise, because this gets stated too loosely: <code>asyncio</code> can absolutely coordinate CPU-bound work — <code>asyncio.to_thread</code>, or <code>loop.run_in_executor</code> with a thread, process, or interpreter pool. What it will not do is make CPU-bound work parallel <em>by itself</em>, which is what the benchmark above measures and what most people assume <code>gather</code> does. The parallelism, when you get it, comes from the executor you reached for; <code>await</code> only decides when your coroutine yields.</p>
+<p><strong>So I installed the free-threaded build and measured it.</strong> CPython is finally addressing this. The free-threaded build from PEP 703 was experimental in 3.13, and PEP 779 promoted it to officially supported in 3.14. The single-threaded penalty is way down: CPython&rsquo;s own documentation now puts the free-threaded build&rsquo;s overhead on the pyperformance suite at about 1% on macOS aarch64 to 8% on x86-64 Linux, against roughly 40% in 3.13. That is real progress and I am glad it exists.</p>
+<p>But look again at the version in that output. Those numbers are from <strong>3.14</strong> — the release where free-threading is officially supported — and threading still bought 1.03x. Here is why:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> sysconfig<span style="color:#f92672">,</span> sys
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> sysconfig<span style="color:#f92672">.</span>get_config_var(<span style="color:#e6db74">&#34;Py_GIL_DISABLED&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> sys<span style="color:#f92672">.</span>_is_gil_enabled()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">True</span>
+</span></span></code></pre></div><p>Officially supported is not the same as <em>on</em>. Free-threading is a <em>separate build</em> of the interpreter. Default CPython distributions still commonly ship with the GIL; the ordinary Anaconda 3.14 build above was built in August 2026 and does.</p>
+<p>So I installed the real thing — the same 3.14.7, built free-threaded — and ran the identical script:</p>
+<pre tabindex="0"><code>python 3.14.7t   (Py_GIL_DISABLED=1, sys.abiflags=&#39;t&#39;)
+  sequential        2.319s  1.00x
+  threading(8)      0.384s  6.04x   &lt;-
+  asyncio.gather    2.252s  1.03x
+  multiprocessing   0.509s  4.56x
+</code></pre><p><strong>Threading went from 1.03x to 6.04x.</strong> I want to be completely straight about this, because it is the strongest counter-argument to everything above: free-threading is not vapourware. It works. On this workload it delivers roughly six-fold parallelism across eight cores, with shared memory and no pickling — exactly what people have wanted from Python threads for twenty years.</p>
+<p>And you can isolate the cause exactly, because the same binary lets you put the GIL back:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ PYTHON_GIL<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> python bench.py
+</span></span><span style="display:flex;"><span>  sequential        2.475s  1.00x
+</span></span><span style="display:flex;"><span>  threading(8)      2.333s  1.06x
+</span></span></code></pre></div><p>Same interpreter, same code, one environment variable. 6.04x becomes 1.06x. The GIL state was the controlled variable.</p>
+<p>So: credit where it is due. But three things did not change, and they are why the rest of this post still stands.</p>
+<p><strong>First, <code>asyncio</code> still bought 1.03x — with no GIL at all.</strong> That is the cleanest possible demonstration that async was never a parallelism story. Take away the thing everyone blames, and <code>asyncio.gather</code> over eight CPU-bound coroutines is <em>still</em> exactly as fast as a plain sequential loop, because it still runs on one thread by design. If you reached for <code>async</code> to use your cores, you were wrong about what it does, and free-threading does not rescue you.</p>
+<p><strong>Second, it is still slow.</strong> Free-threaded Python at full parallel tilt takes 0.384s. C# takes 0.019s. That is still 20x. Single-threaded, it is still 21x. Free-threading closes the <em>scaling</em> gap; it does not touch the <em>speed</em> gap.</p>
+<p><strong>Third, switching is a migration, not a flag.</strong> The free-threaded interpreter has a different ABI, visible in the <code>t</code> suffix above. Extension modules built for the conventional CPython 3.14 ABI are not interchangeable with <code>cp314t</code> artifacts, so every compiled dependency needs a compatible build for your platform. The ecosystem increasingly publishes those builds — NumPy is one example — but the dependency that does not is the one that stops you.</p>
+<p>There is a sting in the tail: CPython&rsquo;s own documentation is explicit that importing an extension which does not declare free-threading support raises a warning and enables the GIL at runtime. A half-migrated environment can hand you back the very thing you were trying to escape, at import time, behind a warning that is easy to miss in a busy startup log.</p>
+<p>And none of it does anything whatsoever about dynamic typing — the other half of this post, and the half no interpreter build can fix.</p>
+<hr>
+<h2 id="the-bill-comes-due">The bill comes due</h2>
+<p>Here is the part that actually hurts. Each band-aid is defensible on its own. Together, they destroy the exact property you chose Python for.</p>
+<p><strong>You lose readability.</strong> Signatures grow to three lines. Half of every module is imports from <code>typing</code>. The business logic — the reason the file exists — is now a minority shareholder in its own source file.</p>
+<p><strong>You lose simplicity.</strong> A new hire cannot run the project until they have understood your <code>pyproject.toml</code>, your virtualenv strategy, which of <code>mypy</code>/<code>pyright</code>/<code>ruff</code>/<code>black</code> you use and in what order, why some modules are <code>async</code> and some are not, and where the <code># type: ignore</code> landmines are.</p>
+<p><strong>You get two languages in one repo.</strong> The strictly-typed, Pydantic-everything modules written by the engineer who wanted a real language, and the loose duck-typed modules written the way Python is meant to be written. Every boundary between them is a defect waiting to happen.</p>
+<p><strong>And you keep every weakness.</strong> After all of it, Python is still dynamically typed at runtime. CPython still executes most user code through its bytecode interpreter. It can still ship type errors that a compiler would have caught before producing an executable.</p>
+<p>That extra machinery can be worthwhile, but it does not change CPython&rsquo;s execution model. You take on part of the cost of a static language while deliberately retaining the trade-offs of a dynamic one.</p>
+<hr>
+<h2 id="what-a-type-checker-actually-catches--and-where-it-stops">What a type checker actually catches — and where it stops</h2>
+<p>Abstract arguments about type safety go nowhere, so here are four bugs real codebases ship. And I am going to start by doing the thing the enthusiastic version of this argument often skips: running <code>mypy</code> on all of them.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>add(<span style="color:#e6db74">&#34;1&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span>)                       <span style="color:#75715e"># wrong argument type</span>
+</span></span><span style="display:flex;"><span>o<span style="color:#f92672">.</span>totl                              <span style="color:#75715e"># typo&#39;d field on a dataclass</span>
+</span></span><span style="display:flex;"><span>name<span style="color:#f92672">.</span>upper()                        <span style="color:#75715e"># name is str | None</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">describe</span>(s: str) <span style="color:#f92672">-&gt;</span> str: <span style="color:#f92672">...</span>    <span style="color:#75715e"># match with no fallback case</span>
+</span></span></code></pre></div><p><code>mypy</code>, default settings, no flags:</p>
+<pre tabindex="0"><code>error: Argument 1 to &#34;add&#34; has incompatible type &#34;str&#34;; expected &#34;int&#34;  [arg-type]
+error: Argument 2 to &#34;add&#34; has incompatible type &#34;str&#34;; expected &#34;int&#34;  [arg-type]
+error: &#34;Order&#34; has no attribute &#34;totl&#34;; maybe &#34;total&#34;?              [attr-defined]
+error: Item &#34;None&#34; of &#34;str | None&#34; has no attribute &#34;upper&#34;          [union-attr]
+error: Missing return statement                                          [return]
+</code></pre><p><strong>It catches all four faulty sites.</strong> The first call produces two diagnostics, one per argument. If you run <code>mypy</code> in CI and require it to pass, these bugs do not reach production, and any article that tells you otherwise is selling you something.</p>
+<p>Python&rsquo;s tooling is better at exhaustiveness than it usually gets credit for, too. Close the domain and ask for the check explicitly and you get it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Status <span style="color:#f92672">=</span> Literal[<span style="color:#e6db74">&#34;pending&#34;</span>, <span style="color:#e6db74">&#34;shipped&#34;</span>, <span style="color:#e6db74">&#34;cancelled&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">describe</span>(s: Status) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">match</span> s:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;pending&#34;</span>: <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;waiting&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;shipped&#34;</span>: <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;on its way&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> _: assert_never(s)
+</span></span></code></pre></div><pre tabindex="0"><code>error: Argument 1 to &#34;assert_never&#34; has incompatible type
+       &#34;Literal[&#39;cancelled&#39;]&#34;; expected &#34;Never&#34;  [arg-type]
+</code></pre><p>So let me state the argument precisely, because the sloppy version of it — &ldquo;Python can&rsquo;t catch this&rdquo; — is simply false.</p>
+<p>The problem is not detection. It is that detection is <strong>advisory, and detached from the thing that actually runs</strong>. Three consequences follow, and they are the whole of my case.</p>
+<h3 id="one-anybody-can-switch-it-off-one-line-at-a-time">One: anybody can switch it off, one line at a time</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>add(<span style="color:#e6db74">&#34;1&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span>)  <span style="color:#75715e"># type: ignore</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ mypy silenced.py
+</span></span><span style="display:flex;"><span>Success: no issues found in 1 source file
+</span></span></code></pre></div><p>That is <code>mypy</code> issuing a clean bill of health on a call it flagged seconds earlier. The comment costs fourteen characters, needs no justification, and survives code review because the diff looks like someone fixing a type error rather than hiding one.</p>
+<p>C#&rsquo;s <code>#pragma warning disable</code> can suppress warnings, not compiler errors. Try it on an error:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">#pragma</span> warning disable CS1503
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> Add(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b) =&gt; a + b;
+</span></span><span style="display:flex;"><span>Console.WriteLine(Add(<span style="color:#e6db74">&#34;1&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span>));
+</span></span></code></pre></div><pre tabindex="0"><code>error CS1503: Argument 1: cannot convert from &#39;string&#39; to &#39;int&#39;
+error CS1503: Argument 2: cannot convert from &#39;string&#39; to &#39;int&#39;
+The build failed. Fix the build errors and run again.
+</code></pre><p>The warning pragma cannot make that exact program build. C# has escape hatches — <code>dynamic</code>, casts, and reflection — but using one requires changing the code and giving up static checking at that point. That is what a veto over ordinary statically typed code means, and it is the actual difference between the two systems — not which bugs each one can see.</p>
+<h3 id="two-it-can-fail-open-at-untyped-boundaries">Two: it can fail open at untyped boundaries</h3>
+<p>The <code>mypy --strict</code> example from earlier is the whole problem in six lines: a fully annotated function, a clean strict run, and <code>'33'</code> where an integer was promised. Static checking degrades to nothing at <code>Any</code>, and <code>Any</code> is common when deserialised or untyped data reaches otherwise typed code.</p>
+<p>Your type checker is strongest in the code you wrote and weakest at the boundary — which is the exact inverse of where the errors are.</p>
+<h3 id="three-the-checker-does-not-enforce-types-at-runtime">Three: the checker does not enforce types at runtime</h3>
+<p>The checker is a separate program you have to remember to run. Production runs CPython, which enforces argument counts and keyword rules perfectly well, and enforces annotated <em>types</em> not at all. So when a wrong type does get through — from an untyped dependency, a JSON payload, a queue message, a <code># type: ignore</code> added at 6 p.m. on a Friday — you find out the way you always did:</p>
+<pre tabindex="0"><code>AttributeError: &#39;NoneType&#39; object has no attribute &#39;upper&#39;
+</code></pre><p>at the moment that line executes, which may be in a rarely-hit error handler, at 3 a.m., in production, with a traceback that points at the victim rather than the culprit.</p>
+<p>For the ordinary, statically typed C# equivalents above, the messages arrive before the program can be built. That is not because the C# compiler is cleverer than <code>mypy</code> — on the typo case, <code>mypy</code>&rsquo;s message is better written, and it suggested the correct field name. It is because one of them is the thing that builds your program and the other is a program you can decline to run.</p>
+<h2 id="the-speed-argument-measured">The speed argument, measured</h2>
+<p>The same forty-million-iteration workload, same machine, same algorithm, verified to produce an identical checksum in both languages:</p>
+<ul>
+<li><strong>Single-threaded:</strong> Python 3.14.7 with the GIL, 2.569s; free-threaded Python 3.14.7t, 2.319s; C#/.NET 10, <strong>0.109s</strong>.</li>
+<li><strong>Eight worker threads/tasks:</strong> Python with the GIL, 2.486s (<em>1.03x</em>); free-threaded Python, 0.384s (<em>6.04x</em>); C# <code>Task.Run</code>, <strong>0.019s (<em>5.74x</em>)</strong>.</li>
+<li><strong><code>asyncio.gather</code>:</strong> Python with the GIL, 2.566s (<em>1.00x</em>); free-threaded Python, 2.252s (<em>1.03x</em>).</li>
+<li><strong>Eight Python processes:</strong> Python with the GIL, 0.510s (<em>5.04x</em>); free-threaded Python, 0.509s (<em>4.56x</em>).</li>
+</ul>
+<p>Two separate results in those numbers compound.</p>
+<p><strong>Single-threaded, C# is roughly 24x faster</strong> than the GIL build and 21x faster than the free-threaded one. Same loop, same arithmetic, same answer — and that is against current CPython 3.14.7 builds.</p>
+<p><strong>Threading works in both — once Python is free-threaded.</strong> C# gets 5.74x from eight <code>Task.Run</code> work items scheduled on the .NET thread pool. Free-threaded Python gets a comparable 6.04x. The scaling story is now genuinely similar; what remains is the constant factor, and it is large: 0.384s against 0.019s, or 20x, for the same eight parallel tasks.</p>
+<p>Put end to end, stock CPython to JIT-compiled .NET code: 2.569s to 0.019s — a factor of 135. That is not a tuning difference, it is a different category of machine.</p>
+<p><strong>The caveats, because they matter.</strong> This is a tight scalar integer loop — the single most favourable possible case for compiled code, and the least favourable for CPython. Swap in NumPy and the array version of this workload drops into C and the gap narrows dramatically, because you are no longer running Python in the hot loop; you are running C with Python holding the coat. That is precisely the point I am making, though: Python is fast when it is delegating to a compiled language. The question is what language you should be writing your own logic in.</p>
+<hr>
+<h2 id="if-you-want-a-real-programming-language-use-one">If you want a real programming language, use one</h2>
+<p>C# is the one I would point most teams at, and the objection I always hear — &ldquo;it&rsquo;s heavyweight, I just want to write a file and run it&rdquo; — is out of date.</p>
+<p><strong>Write a file and run it.</strong> As of .NET 10, C# has first-class file-based apps. No project file, no scaffolding, no <code>dotnet new</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span>!/usr/bin/env -S dotnet --
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> orders = File.ReadLines(<span style="color:#e6db74">&#34;orders.csv&#34;</span>).Skip(<span style="color:#ae81ff">1</span>).Select(Order.Parse).ToList();
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;{orders.Count} orders, total {orders.Sum(o =&gt; o.Total):F2}&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Order</span>(<span style="color:#66d9ef">int</span> Id, <span style="color:#66d9ef">decimal</span> Total)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Order Parse(<span style="color:#66d9ef">string</span> line)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> p = line.Split(<span style="color:#e6db74">&#39;,&#39;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Order(<span style="color:#66d9ef">int</span>.Parse(p[<span style="color:#ae81ff">0</span>]), <span style="color:#66d9ef">decimal</span>.Parse(p[<span style="color:#ae81ff">1</span>]));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ chmod +x report.cs <span style="color:#f92672">&amp;&amp;</span> ./report.cs
+</span></span></code></pre></div><p>That is a script. It is also statically typed, compiled, and it refuses to build the moment you hand <code>p[0]</code> — a string — to something expecting an <code>int</code>. Need a NuGet package? One line in the file: <code>#:package System.CommandLine@2.0.0</code>. Need an MSBuild property? <code>#:property</code>. When it outgrows a single file, <code>dotnet project convert report.cs</code> creates a conventional project directory containing copies of the source and generated <code>.csproj</code>, leaving the original file untouched.</p>
+<p><strong>Interactive work is the weak spot, and I am not going to pretend otherwise.</strong> If you came here expecting me to recommend Polyglot Notebooks, that ship has sailed: Microsoft deprecated the Polyglot Notebooks extension in March 2026 and .NET Interactive a month later, and archived the repository. Anyone still linking to it has not checked recently.</p>
+<p>What is interesting is Microsoft&rsquo;s own stated replacement for C# users — file-based apps, the feature at the top of this section. Their reasoning is that the thing most people actually wanted from a notebook was a lightweight way to try some code and a NuGet package without ceremony, and a single <code>.cs</code> file you can run now does that.</p>
+<p>I think that is mostly right and it matches how I work — edit the file, <code>dotnet run</code> it, iterate — but &ldquo;mostly right&rdquo; is not &ldquo;the same thing&rdquo;. You do not get cell-by-cell state, and you do not get inline plots. For a terminal REPL, C# Interactive (<code>csi</code>) ships with Visual Studio, which means Windows; cross-platform there are community global tools such as <code>dotnet-repl</code> and <code>csharprepl</code>, neither of them Microsoft&rsquo;s. If exploratory, notebook-shaped work is central to your day, Python and Jupyter genuinely win this one, and you should weigh that honestly rather than take my word for it.</p>
+<p><strong>You can still use Python&rsquo;s libraries.</strong> This is usually the real objection, and it is the best one: NumPy, pandas, PyTorch, scikit-learn, and a hundred thousand packages that have no equivalent anywhere else. <a href="https://github.com/tonybaloney/CSnakes">CSnakes</a> embeds CPython directly in a .NET process through the C API — not a subprocess, not a REST hop — so packages with compiled extensions work as they do in Python.</p>
+<p>And the detail I find genuinely funny: <strong>CSnakes reads supported Python function annotations and generates typed C# wrappers from them.</strong> Those supported annotations become compile-checked signatures when they cross into C#.</p>
+<p>(CSnakes documents support for .NET 8–10 and Python 3.9–3.14, including free-threaded builds from 3.13 on. Check current compatibility before you build on it.)</p>
+<p>That division of labour is the right one, and it is the same one Python itself uses when it drops into C: the numerical core stays in the ecosystem that has the libraries, and your application layer, your concurrency, and your business rules live somewhere that has a compiler.</p>
+<p><strong>And a standard .NET installation gives you things Python offers only on a different interpreter — or not at all.</strong> Parallel execution of your own code on ordinary threads, with no alternate ABI and no waiting on free-threaded wheels. (To be exact about what free-threading changed: CPython&rsquo;s threads have always been real OS threads sharing one address space, and C extensions have always been able to release the GIL. What was missing, until the free-threaded build, was two of those threads running <em>Python bytecode</em> at the same time.) Records, <code>Span&lt;T&gt;</code>, LINQ, and optional Native AOT publishing to a self-contained executable. C# also has nullable-reference analysis and diagnostics for many non-exhaustive switch expressions; those are compiler warnings, not runtime enforcement, and teams that want a hard gate should treat warnings as errors. .NET 10 is an active LTS release supported through November 14, 2028 — the kind of published support horizon procurement departments actually ask about.</p>
+<p>And note the direction of the default. C# has <code>dynamic</code> when you genuinely want late binding — dynamism is the opt-in escape hatch from a static language. Python has type hints — static checking is the opt-in escape hatch from a dynamic language, and it is one the runtime never enforces. Defaults decide what happens in the code nobody had time to polish, which is most of the code.</p>
+<hr>
+<h2 id="but-the-syntax-is-harder">&ldquo;But the syntax is harder&rdquo;</h2>
+<p>It used to be a fair point. Python&rsquo;s low barrier to entry was a genuine strategic advantage: you could hand it to an analyst, a scientist, a junior, and get useful work back that afternoon.</p>
+<p>It is also worth noticing how much of that gap has already closed from the other direction. This:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>top <span style="color:#f92672">=</span> sorted((o <span style="color:#66d9ef">for</span> o <span style="color:#f92672">in</span> orders <span style="color:#66d9ef">if</span> o<span style="color:#f92672">.</span>total <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100</span>), key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> o: <span style="color:#f92672">-</span>o<span style="color:#f92672">.</span>total)[:<span style="color:#ae81ff">10</span>]
+</span></span></code></pre></div><p>and this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> top = orders.Where(o =&gt; o.Total &gt; <span style="color:#ae81ff">100</span>).OrderByDescending(o =&gt; o.Total).Take(<span style="color:#ae81ff">10</span>);
+</span></span></code></pre></div><p>are the same thought. One of them is checked before it runs.</p>
+<p>And AI-assisted coding has flattened most of what remains. Boilerplate, ceremony, unfamiliar generics, the shape of an interface you half remember — that is precisely the category of work that assistants are best at, and it is precisely the category that made statically typed languages feel expensive. Meanwhile the thing AI is <em>worst</em> at — reasoning reliably about code with no enforced contracts — is exactly what you get more of in a large dynamically typed codebase.</p>
+<p>Static types are, if anything, worth more in an AI-assisted workflow than they were before. The compiler is the cheapest reviewer you have, it never gets tired, and it reviews every line of generated code for free.</p>
+<hr>
+<h2 id="answering-the-strongest-objections">Answering the strongest objections</h2>
+<p><strong>&ldquo;The ecosystem is the whole argument.&rdquo;</strong> For numerical and ML work, yes. Nothing else comes close, and pretending otherwise is silly. That is an argument for calling into Python, not for writing your entire production system in it. See CSnakes above.</p>
+<p><strong>&ldquo;My team already knows Python.&rdquo;</strong> Real cost, honestly. But weigh it against the cost you are already paying: the type-annotation tax, the runtime validation tax, the incident tax from errors a compiler catches. Teams that know Python well enough to write strictly-typed, <code>async</code>-heavy, Pydantic-modeled Python have already done most of the conceptual work of learning a static language. They just did it in a language that cannot reward them for it.</p>
+<p><strong>&ldquo;Pydantic and FastAPI are a great stack.&rdquo;</strong> They are. For an I/O-bound service, at moderate scale, with a small team, it is a completely reasonable choice, and I would not rewrite a working one. Notice that the benchmark above says nothing bad about that case: if your threads are waiting on sockets rather than executing bytecode, the GIL is not your bottleneck and <code>asyncio</code> is genuinely the right tool. The critique is not &ldquo;never use Python.&rdquo; It is &ldquo;notice when you are simulating a different language, and consider using that language instead.&rdquo;</p>
+<p><strong>&ldquo;Free-threading fixes the GIL.&rdquo;</strong> It genuinely does, and I checked rather than assumed: on the free-threaded 3.14.7 build, the same benchmark scales 6.04x on eight cores instead of 1.03x. If your problem is CPU-bound parallelism in Python, that is the real answer and you should be watching it closely. Three things survive it, though. <code>asyncio.gather</code> still gains nothing on this benchmark without a GIL, so the async-equals-fast confusion is untouched. Free-threaded Python is still around 20x slower than C# on this workload, because removing the GIL does not make an interpreter a compiler. And switching is an ABI migration across every compiled dependency you have, not a configuration change. Also, of course, it does nothing about dynamic typing.</p>
+<hr>
+<h2 id="the-rule-of-thumb">The rule of thumb</h2>
+<p>My own default, after watching this cycle repeat:</p>
+<ul>
+<li><strong>Rust instead of C.</strong> Systems-level work where memory safety is worth a strict compiler.</li>
+<li><strong>C# instead of C++ and instead of Python-pretending-to-be-C#.</strong> Applications, services, and anything that has to be maintained: compiled speed, real type safety, genuine threading, enterprise robustness.</li>
+<li><strong>Python, Lua, and shell where scripting is actually the job.</strong> Glue, automation, notebooks, one-off analysis, experiment code, the edges of an ML pipeline. Keep it small, keep it simple, and keep it untyped — that is the strength you came for.</li>
+</ul>
+<p>The rule is not &ldquo;Python is bad.&rdquo; Python is superb at the thing it is for. The rule is this:</p>
+<p><strong>The moment you find yourself adding a fourth tool to make Python feel like a static, compiled, multithreaded language, stop. You have not outgrown your tooling. You have outgrown your language.</strong></p>
+<p>Reach for the real thing instead of another tube of lipstick.</p>
+<hr>
+<h2 id="how-the-numbers-were-produced">How the numbers were produced</h2>
+<p>AMD Ryzen 7 5825U, 8 physical cores / 16 hardware threads, Linux 6.12. CPython 3.14.7 (stock Anaconda build, <code>Py_GIL_DISABLED=0</code>, GIL enabled); conda-forge <code>python-freethreading</code> 3.14.7 (<code>Py_GIL_DISABLED=1</code>, <code>sys.abiflags='t'</code>), the same CPython version, running the identical unmodified script; .NET SDK 10.0.302 running .NET 10.0.10, Release configuration, with a warm-up call before timing. Pydantic 2.13.5, mypy 1.17.1.</p>
+<p><strong>The workload.</strong> Eight tasks; task <code>k</code> computes <code>(s + i*i) % 1_000_000_007</code> iteratively over <code>range(5_000_000 + k)</code>. Roughly 40 million loop iterations in total. Both implementations return the same checksum, <code>562483196</code>, which is how I know they are doing the same work. That figure is the sum across all eight tasks — a single <code>crunch(5_000_000)</code> on its own returns <code>922875</code>.</p>
+<p><strong>Why the modulus is there.</strong> It keeps the accumulator inside a machine integer: without it the sum overflows <code>Int64</code> at this size, so default unchecked C# arithmetic wraps while Python continues with arbitrary-precision integers. The two programs would no longer be doing equivalent arithmetic. The modulo reduction is also expensive in compiled code: in a separate modulus-free C# trial, the sequential loop took 0.0125s rather than 0.113s. JIT disassembly confirms that the published <code>Crunch</code> loop is scalar, so attributing that difference to vectorisation was wrong; it primarily reflects removing a remainder calculation from every iteration.</p>
+<p>(An earlier draft also claimed the eight tasks use different ranges to stop the JIT eliding repeated identical calls. That was wrong, and testing killed it: identical accumulated calls take the same 0.112s. The suspiciously fast result came from removing the modulus, not from call elision.)</p>
+<p><strong>How the runs were selected.</strong> Each implementation&rsquo;s displayed figures come from one complete run, so every multiplier divides timings from that same run rather than mixing separately selected best times. Across five runs the spread was: CPython 3.14.7 sequential 2.569–2.704s, threads 2.486–2.571s; free-threaded sequential 2.314–2.615s, threads 0.384–0.401s; C# sequential 0.109–0.115s, <code>Task.Run</code> 0.019–0.021s. The conclusions do not depend on which run you pick. For reference, CPython 3.13.9 on the identical script gives 2.846s sequential and 1.13x on eight threads.</p>
+<p><strong>A caveat on the two Python columns.</strong> They are different vendors&rsquo; builds (Anaconda and conda-forge), so the single-threaded difference between them is not a controlled measurement and I draw no conclusion from it. CPython&rsquo;s documentation puts the free-threaded build&rsquo;s own overhead at about 1% to 8% depending on platform. The controlled comparison is the <code>PYTHON_GIL=1</code> toggle on the free-threaded binary, where only the GIL changes: 1.06x with it, 6.04x without.</p>
+<p><strong>Everything else.</strong> Every compiler message, <code>mypy</code> result, traceback, and benchmark result quoted in this post was produced by running it, not from memory. The typing examples behave identically on 3.13.9 and 3.14.7; the one behavioural difference between those versions is deferred annotation evaluation, which is shown explicitly.</p>
+<p>One benchmark on one machine is not a benchmark suite, and a scalar integer loop flatters compiled code about as much as any workload can. Treat the magnitudes as indicative and the <em>shapes</em> — threads scaling or not scaling — as the real finding. Both benchmark implementations and a README are published with this post so you can check rather than trust.</p>
+<hr>
+<h2 id="primary-references">Primary references</h2>
+<ul>
+<li><a href="https://docs.python.org/3/library/typing.html">Python typing documentation</a></li>
+<li><a href="https://peps.python.org/pep-0649/">PEP 649: deferred evaluation of annotations</a></li>
+<li><a href="https://peps.python.org/pep-0779/">PEP 779: supported status for free-threaded Python</a> and the <a href="https://docs.python.org/3/howto/free-threading-python.html">free-threading HOWTO</a></li>
+<li><a href="https://docs.python.org/3/library/asyncio-dev.html#running-blocking-code">Python&rsquo;s guidance on running blocking work with <code>asyncio</code></a></li>
+<li><a href="https://mypy.readthedocs.io/en/stable/dynamic_typing.html">Mypy&rsquo;s documentation for <code>Any</code></a> and <a href="https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-disallow-any-expr"><code>--disallow-any-expr</code></a></li>
+<li><a href="https://docs.pydantic.dev/latest/concepts/strict_mode/">Pydantic strict mode</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/core/sdk/file-based-apps">.NET 10 file-based apps</a> and the <a href="https://dotnet.microsoft.com/en-us/platform/support/policy">.NET support policy</a></li>
+<li><a href="https://github.com/dotnet/interactive/issues/4163">The .NET Interactive and Polyglot Notebooks deprecation announcement</a></li>
+<li><a href="https://tonybaloney.github.io/CSnakes/latest/">CSnakes documentation</a></li>
+</ul>
+</div>
+
+          
+          <div class="tags mt-4 content">
+            <i class="fas fa-tags mr-2"></i>
+             <a
+              href="../../tags/python">Python</a>, <a
+              href="../../tags/c">C#</a>, <a
+              href="../../tags/performance">Performance</a>, <a
+              href="../../tags/type_safety">Type_safety</a>, <a
+              href="../../tags/concurrency">Concurrency</a>, <a
+              href="../../tags/software_engineering">Software_engineering</a>
+          </div>
+          
+
+          
+          
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="bg-white sticky-top" style="top: 80px;">
+          <div class="widget">
+            <h3 class="widget-title">Tags</h3>
+            <ul class="list-unstyled widget-list">
+              <li><a href="../../tags/batchfile">Batchfile&nbsp;&nbsp;(1)</a></li>
+              <li><a href="../../tags/c">C#&nbsp;&nbsp;(2)</a></li>
+              <li><a href="../../tags/concurrency">Concurrency&nbsp;&nbsp;(1)</a></li>
+              <li><a href="../../tags/data_science">Data science&nbsp;&nbsp;(1)</a></li>
+              <li><a href="../../tags/linux">Linux&nbsp;&nbsp;(1)</a></li>
+              <li><a href="../../tags/performance">Performance&nbsp;&nbsp;(1)</a></li>
+              <li><a href="../../tags/productivity">Productivity&nbsp;&nbsp;(1)</a></li>
+              <li><a href="../../tags/python">Python&nbsp;&nbsp;(2)</a></li>
+              <li><a href="../../tags/shell">Shell&nbsp;&nbsp;(1)</a></li>
+              <li><a href="../../tags/software_engineering">Software engineering&nbsp;&nbsp;(1)</a></li>
+              <li><a href="../../tags/type_safety">Type safety&nbsp;&nbsp;(1)</a></li>
+              <li><a href="../../tags/windows">Windows&nbsp;&nbsp;(1)</a></li>
+            </ul>
+          </div>
+
+          <div class="widget">
+            <h3 class="widget-title">Related Post</h3>
+            
+            
+            <ul class="list-unstyled widget-list">
+              <li class="media widget-post align-items-center">
+                
+                <a href="../../blog/00001_productivity_tools/">
+                  <img class="widget-img" src="../../images/blog/productivity_hu_d3dc8fbd0158ea14.webp" alt="Productivity Tools" loading="lazy" decoding="async">
+                </a>
+                
+                <div class="media-body">
+                  <h5 class="h6 mb-0"><a href="../../blog/00001_productivity_tools/">Productivity Tools</a></h5>
+                  <small>April 11, 2021</small>
+                </div>
+              </li>
+            </ul>
+            
+            <ul class="list-unstyled widget-list">
+              <li class="media widget-post align-items-center">
+                
+                <a href="../../blog/00002_what_is_data_science/">
+                  <img class="widget-img" src="../../images/blog/casio_calculator_hu_11ab31e999df0547.webp" alt="What is Data Science?" loading="lazy" decoding="async">
+                </a>
+                
+                <div class="media-body">
+                  <h5 class="h6 mb-0"><a href="../../blog/00002_what_is_data_science/">What is Data Science?</a></h5>
+                  <small>May 1, 2021</small>
+                </div>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+	<footer class="footer-bg fadeInUp wow" data-wow-duration="1.5s">
+  <div class="container">
+    <div class="row">
+      <div class="footer col-lg-10 offset-lg-1">
+        <hr>
+        <ul class="footer-icons list-inline">
+          
+          <li><a href="https://github.com/magnacore"><i class="fab fa-github"></i></a></li>
+          
+          <li><a href="https://gitlab.com/magnacore"><i class="fab fa-gitlab"></i></a></li>
+          
+          <li><a href="https://www.linkedin.com/in/manuj/"><i class="fab fa-linkedin"></i></a></li>
+          
+          <li><a href="https://www.youtube.com/channel/UC4znd_SgcCA1VvWKqwz932w"><i class="fab fa-youtube"></i></a></li>
+          
+          <li><a href="https://www.youtube.com/channel/UCmM1In0bl5ZEWyb-bprql_Q"><i class="fab fa-youtube"></i></a></li>
+          
+        </ul>
+        <div class="to-top">
+          <a href="#home"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <div class="credit content">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</footer><!-- JS Plugins -->
+
+<script src="../../plugins/jQuery/jquery.min.js"></script>
+
+<script src="../../plugins/text-animation/text-animation.js"></script>
+
+<script src="../../plugins/jquery.waypoints.min.js"></script>
+
+<script src="../../plugins/shuffle/shuffle.min.js"></script>
+
+<script src="../../plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<!-- Main Script -->
+
+<script src="../../js/script.min.js"></script>
+
+<!-- Hero mosaic -->
+
+<script src="../../js/hero-mosaic.min.js" defer></script>
+
+<!-- google analitycs -->
+</body>
+
+</html>

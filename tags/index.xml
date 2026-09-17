@@ -7,8 +7,50 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>This site is also hosted on [IPFS](ipns://k2k4r8ln35f2uouxxleya6ae8t5339p7lt7d2ylfsmdz13q7cka42lm7/)</copyright>
-    <lastBuildDate>Sat, 01 May 2021 12:14:34 +0600</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 09:00:00 +0530</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C#</title>
+      <link>/tags/c%23/</link>
+      <pubDate>Thu, 17 Sep 2026 09:00:00 +0530</pubDate>
+      <guid>/tags/c%23/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Concurrency</title>
+      <link>/tags/concurrency/</link>
+      <pubDate>Thu, 17 Sep 2026 09:00:00 +0530</pubDate>
+      <guid>/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performance</title>
+      <link>/tags/performance/</link>
+      <pubDate>Thu, 17 Sep 2026 09:00:00 +0530</pubDate>
+      <guid>/tags/performance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Thu, 17 Sep 2026 09:00:00 +0530</pubDate>
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software_engineering</title>
+      <link>/tags/software_engineering/</link>
+      <pubDate>Thu, 17 Sep 2026 09:00:00 +0530</pubDate>
+      <guid>/tags/software_engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Type_safety</title>
+      <link>/tags/type_safety/</link>
+      <pubDate>Thu, 17 Sep 2026 09:00:00 +0530</pubDate>
+      <guid>/tags/type_safety/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Data_science</title>
       <link>/tags/data_science/</link>
@@ -24,13 +66,6 @@
       <description></description>
     </item>
     <item>
-      <title>C#</title>
-      <link>/tags/c%23/</link>
-      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
-      <guid>/tags/c%23/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Linux</title>
       <link>/tags/linux/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
@@ -42,13 +77,6 @@
       <link>/tags/productivity/</link>
       <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
       <guid>/tags/productivity/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>/tags/python/</link>
-      <pubDate>Sun, 11 Apr 2021 12:14:34 +0600</pubDate>
-      <guid>/tags/python/</guid>
       <description></description>
     </item>
     <item>
