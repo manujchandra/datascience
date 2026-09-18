@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C# on Data Science, Agent Governance &amp; Corporate Training</title>
-    <link>/tags/c%23/</link>
+    <link>/tags/csharp/</link>
     <description>Recent content in C# on Data Science, Agent Governance &amp; Corporate Training</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>This site is also hosted on [IPFS](ipns://k2k4r8ln35f2uouxxleya6ae8t5339p7lt7d2ylfsmdz13q7cka42lm7/)</copyright>
     <lastBuildDate>Thu, 17 Sep 2026 09:00:00 +0530</lastBuildDate>
-    <atom:link href="/tags/c%23/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lipstick on a Snake</title>
       <link>/blog/00003_lipstick_on_a_snake/</link>
